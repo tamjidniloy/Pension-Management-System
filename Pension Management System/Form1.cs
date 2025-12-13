@@ -19,16 +19,17 @@ namespace Pension_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
             Form3 f3 = new Form3();
             f3.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             Form2 f2 = new Form2();
             f2.Show();
+            this.Close();
         }
     }
 }

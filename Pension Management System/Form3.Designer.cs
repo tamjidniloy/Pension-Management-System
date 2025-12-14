@@ -37,15 +37,15 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(97, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(611, 69);
+            this.label1.Size = new System.Drawing.Size(1019, 69);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Jannate Ajmin Tanha";
+            this.label1.Text = "Jannate Ajmin Tanha Natural Beuty ";
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1123, 450);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "Form3";

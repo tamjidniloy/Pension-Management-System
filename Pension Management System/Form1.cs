@@ -17,19 +17,22 @@ namespace Pension_Management_System
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        
+
+       
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             Form3 f3 = new Form3();
             f3.Show();
-            this.Close();
+            this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            
             Form2 f2 = new Form2();
             f2.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

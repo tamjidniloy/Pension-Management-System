@@ -16,5 +16,10 @@ namespace Pension_Management_System
         {
             InitializeComponent();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

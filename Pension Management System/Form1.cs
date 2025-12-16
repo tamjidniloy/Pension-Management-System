@@ -34,5 +34,12 @@ namespace Pension_Management_System
             f2.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 f4 = new Form4(); 
+            f4.Show();
+        }
     }
 }

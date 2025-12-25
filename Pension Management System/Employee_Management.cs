@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pension_Management_System
 {
-    public partial class Form5 : Form
+    public partial class Employee_Management : Form
     {
-        public Form5()
+        public Employee_Management()
         {
             InitializeComponent();
         }

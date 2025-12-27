@@ -30,5 +30,7 @@ namespace Pension_Management_System
             Employee_Management addEmployeeForm = new Employee_Management();
             addEmployeeForm.Show();
         }
+
+        
     }
 }

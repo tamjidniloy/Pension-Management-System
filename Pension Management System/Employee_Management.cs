@@ -175,7 +175,6 @@ namespace Pension_Management_System
                         cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
                         cmd.Parameters.AddWithValue("@Password", "1234");
-                        MessageBox.Show("A new user added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -184,14 +183,13 @@ namespace Pension_Management_System
                         cmd.Parameters.AddWithValue("@Id", selectedUserId);
                         cmd.Parameters.AddWithValue("@UserName", txtName.Text.Trim());
                         cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
-                       
+                        cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());                    
                     }
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }                
                 RefreshForm();
-                MessageBox.Show("User information updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("User information updated/Added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -229,8 +227,7 @@ namespace Pension_Management_System
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = @"
-                SELECT 
+                    string query = @"SELECT 
                     U.User_Id,
                     R.Role_Name,
                     U.User_Name,
@@ -243,9 +240,7 @@ namespace Pension_Management_System
                        OR U.User_PhoneNum LIKE @key)";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
-                    da.SelectCommand.Parameters.AddWithValue(
-                        "@key", "%" + txtSearch.Text.Trim() + "%");
-
+                    da.SelectCommand.Parameters.AddWithValue( "@key", "%" + txtSearch.Text.Trim() + "%");
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvEmployees.DataSource = dt;

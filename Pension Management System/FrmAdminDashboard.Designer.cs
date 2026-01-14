@@ -104,6 +104,7 @@
             this.btnManagePensionar.TabIndex = 2;
             this.btnManagePensionar.Text = "Manage Pensioners";
             this.btnManagePensionar.UseVisualStyleBackColor = false;
+            this.btnManagePensionar.Click += new System.EventHandler(this.btnManagePensionar_Click);
             // 
             // btnManageAccounts
             // 

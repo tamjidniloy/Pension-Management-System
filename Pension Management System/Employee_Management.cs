@@ -175,6 +175,7 @@ namespace Pension_Management_System
                         cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
                         cmd.Parameters.AddWithValue("@Password", "1234");
+                        MessageBox.Show(" A new User Added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -183,13 +184,14 @@ namespace Pension_Management_System
                         cmd.Parameters.AddWithValue("@Id", selectedUserId);
                         cmd.Parameters.AddWithValue("@UserName", txtName.Text.Trim());
                         cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());                    
+                        cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
+                        MessageBox.Show("User information updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }                
                 RefreshForm();
-                MessageBox.Show("User information updated/Added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             catch (Exception ex)
             {

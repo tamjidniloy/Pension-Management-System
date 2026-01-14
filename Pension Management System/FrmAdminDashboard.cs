@@ -30,5 +30,10 @@ namespace Pension_Management_System
             Employee_Management manageEmployeeForm = new Employee_Management();
             manageEmployeeForm.Show();
         }
+
+        private void btnManagePensionar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -97,10 +97,5 @@ namespace Pension_Management_System
                                 MessageBoxIcon.Error);
             }
         }
-
-        private void Login_page_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

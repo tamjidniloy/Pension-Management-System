@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -52,48 +51,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvUser_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User_PhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.pnlEmployee.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-2, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1766, 113);
-            this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.Salmon;
-            this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 54);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(687, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 53);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Employee Management";
             // 
             // txtSearch
             // 
+            this.txtSearch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtSearch.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(12, 223);
+            this.txtSearch.Location = new System.Drawing.Point(12, 237);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(580, 40);
             this.txtSearch.TabIndex = 1;
@@ -101,10 +76,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(324, 136);
+            this.label2.Font = new System.Drawing.Font("Calibri", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(332, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(294, 58);
+            this.label2.Size = new System.Drawing.Size(277, 54);
             this.label2.TabIndex = 2;
             this.label2.Text = "Employee List";
             // 
@@ -114,7 +89,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(598, 220);
+            this.btnSearch.Location = new System.Drawing.Point(614, 234);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(117, 45);
             this.btnSearch.TabIndex = 3;
@@ -128,43 +103,75 @@
             this.dgvEmployees.AllowUserToDeleteRows = false;
             this.dgvEmployees.AllowUserToResizeColumns = false;
             this.dgvEmployees.AllowUserToResizeRows = false;
+            this.dgvEmployees.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dgvEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvEmployees.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvEmployees.BackgroundColor = System.Drawing.Color.White;
-            this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployees.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvEmployees.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvUser_Id,
+            this.Role_Id,
+            this.User_Name,
+            this.User_Email,
+            this.User_PhoneNum});
+            this.dgvEmployees.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmployees.GridColor = System.Drawing.Color.White;
-            this.dgvEmployees.Location = new System.Drawing.Point(12, 284);
+            this.dgvEmployees.Location = new System.Drawing.Point(9, 293);
+            this.dgvEmployees.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvEmployees.MultiSelect = false;
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.ReadOnly = true;
-            this.dgvEmployees.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployees.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEmployees.RowHeadersVisible = false;
+            this.dgvEmployees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvEmployees.RowTemplate.DividerHeight = 1;
             this.dgvEmployees.RowTemplate.Height = 30;
             this.dgvEmployees.RowTemplate.ReadOnly = true;
             this.dgvEmployees.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployees.Size = new System.Drawing.Size(962, 607);
+            this.dgvEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmployees.Size = new System.Drawing.Size(952, 505);
             this.dgvEmployees.TabIndex = 4;
+            this.dgvEmployees.VirtualMode = true;
             this.dgvEmployees.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEmployees_CellMouseDoubleClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1181, 205);
+            this.label3.Font = new System.Drawing.Font("Calibri", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1184, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(461, 58);
+            this.label3.Size = new System.Drawing.Size(435, 54);
             this.label3.TabIndex = 5;
             this.label3.Text = "Employee Information";
             // 
             // pnlEmployee
             // 
+            this.pnlEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlEmployee.BackColor = System.Drawing.Color.LightYellow;
             this.pnlEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlEmployee.Controls.Add(this.txtRole);
@@ -181,7 +188,7 @@
             this.pnlEmployee.Controls.Add(this.label6);
             this.pnlEmployee.Controls.Add(this.label5);
             this.pnlEmployee.Controls.Add(this.label4);
-            this.pnlEmployee.Location = new System.Drawing.Point(1021, 284);
+            this.pnlEmployee.Location = new System.Drawing.Point(1021, 191);
             this.pnlEmployee.Name = "pnlEmployee";
             this.pnlEmployee.Size = new System.Drawing.Size(729, 607);
             this.pnlEmployee.TabIndex = 6;
@@ -201,7 +208,7 @@
             this.btnRefresh.BackColor = System.Drawing.Color.Orange;
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(355, 520);
+            this.btnRefresh.Location = new System.Drawing.Point(352, 444);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(117, 45);
             this.btnRefresh.TabIndex = 14;
@@ -329,14 +336,101 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "User ID : ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(687, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(450, 53);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Employee Management";
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.Salmon;
+            this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 54);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1760, 113);
+            this.panel1.TabIndex = 0;
+            // 
+            // dgvUser_Id
+            // 
+            this.dgvUser_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvUser_Id.DataPropertyName = "User_Id";
+            this.dgvUser_Id.DividerWidth = 1;
+            this.dgvUser_Id.HeaderText = "User ID";
+            this.dgvUser_Id.MinimumWidth = 6;
+            this.dgvUser_Id.Name = "dgvUser_Id";
+            this.dgvUser_Id.ReadOnly = true;
+            this.dgvUser_Id.Width = 128;
+            // 
+            // Role_Id
+            // 
+            this.Role_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Role_Id.DataPropertyName = "Role_Name";
+            this.Role_Id.DividerWidth = 1;
+            this.Role_Id.HeaderText = "Role";
+            this.Role_Id.MinimumWidth = 6;
+            this.Role_Id.Name = "Role_Id";
+            this.Role_Id.ReadOnly = true;
+            this.Role_Id.Width = 94;
+            // 
+            // User_Name
+            // 
+            this.User_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.User_Name.DataPropertyName = "User_Name";
+            this.User_Name.DividerWidth = 1;
+            this.User_Name.HeaderText = "Name";
+            this.User_Name.MinimumWidth = 6;
+            this.User_Name.Name = "User_Name";
+            this.User_Name.ReadOnly = true;
+            // 
+            // User_Email
+            // 
+            this.User_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.User_Email.DataPropertyName = "User_Email";
+            this.User_Email.DividerWidth = 1;
+            this.User_Email.HeaderText = "Email";
+            this.User_Email.MinimumWidth = 6;
+            this.User_Email.Name = "User_Email";
+            this.User_Email.ReadOnly = true;
+            this.User_Email.Width = 106;
+            // 
+            // User_PhoneNum
+            // 
+            this.User_PhoneNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.User_PhoneNum.DataPropertyName = "User_PhoneNum";
+            this.User_PhoneNum.DividerWidth = 1;
+            this.User_PhoneNum.HeaderText = "Phone Number";
+            this.User_PhoneNum.MinimumWidth = 6;
+            this.User_PhoneNum.Name = "User_PhoneNum";
+            this.User_PhoneNum.ReadOnly = true;
+            this.User_PhoneNum.Width = 218;
+            // 
             // Employee_Management
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1762, 903);
+            this.ClientSize = new System.Drawing.Size(1762, 822);
             this.Controls.Add(this.pnlEmployee);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvEmployees);
@@ -348,21 +442,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee_Management";
             this.Load += new System.EventHandler(this.Employee_Management_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.pnlEmployee.ResumeLayout(false);
             this.pnlEmployee.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSearch;
@@ -383,5 +473,13 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtRole;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn User_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn User_Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn User_PhoneNum;
     }
 }

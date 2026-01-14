@@ -23,6 +23,7 @@ namespace Pension_Management_System
             PrepareForAdd();
             LoadEmployees();
         }
+
         private void RefreshForm()
         {
             selectedUserId = 0;
@@ -30,6 +31,7 @@ namespace Pension_Management_System
             ClearPanel();
             PrepareForAdd();
         }
+
         private void ClearPanel()
         {
             txtUserId.Clear();
@@ -44,13 +46,10 @@ namespace Pension_Management_System
         private void PrepareForAdd()
         {
             selectedUserId = 0;
-
             cmbRole.Visible = true;
             txtRole.Visible = false;
-
             cmbRole.SelectedIndex = -1;
             txtRole.Clear();
-
         }
 
         private void LoadEmployees()
@@ -59,22 +58,23 @@ namespace Pension_Management_System
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = @"
-                SELECT 
+                    string query = @"SELECT 
                     U.User_Id,
                     R.Role_Name,
                     U.User_Name,
                     U.User_Email,
                     U.User_PhoneNum
-                FROM Users U
-                JOIN Roles R ON U.Role_Id = R.Role_Id
-                WHERE U.IsActive = 1";
+                    FROM Users U
+                    JOIN Roles R ON U.Role_Id = R.Role_Id
+                    WHERE U.IsActive = 1";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-
+                    dgvEmployees.AutoGenerateColumns = false;
                     dgvEmployees.DataSource = dt;
+                    dgvEmployees.Refresh();
+                    dgvEmployees.ClearSelection();
                 }
             }
             catch (Exception ex)
@@ -90,15 +90,13 @@ namespace Pension_Management_System
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     string query = "SELECT Role_Id, Role_Name FROM Roles";
-
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-
                     cmbRole.DataSource = dt;
-                    cmbRole.DisplayMember = "Role_Name"; // what user sees
-                    cmbRole.ValueMember = "Role_Id";     // actual value
-                    cmbRole.SelectedIndex = -1;          // no default selection
+                    cmbRole.DisplayMember = "Role_Name"; 
+                    cmbRole.ValueMember = "Role_Id";    
+                    cmbRole.SelectedIndex = -1;          
                 }
             }
             catch (Exception ex)
@@ -134,9 +132,9 @@ namespace Pension_Management_System
         {
             try
             {
-                selectedUserId = Convert.ToInt32( dgvEmployees.CurrentRow.Cells["User_Id"].Value);
-                txtUserId.Text = dgvEmployees.CurrentRow.Cells["User_Id"].Value.ToString();
-                txtRole.Text = dgvEmployees.CurrentRow.Cells["Role_Name"].Value.ToString();
+                selectedUserId = Convert.ToInt32( dgvEmployees.CurrentRow.Cells["dgvUser_Id"].Value);
+                txtUserId.Text = dgvEmployees.CurrentRow.Cells["dgvUser_Id"].Value.ToString();
+                txtRole.Text = dgvEmployees.CurrentRow.Cells["Role_Id"].Value.ToString();
                 txtName.Text = dgvEmployees.CurrentRow.Cells["User_Name"].Value.ToString();
                 txtEmail.Text = dgvEmployees.CurrentRow.Cells["User_Email"].Value.ToString();
                 txtPhone.Text = dgvEmployees.CurrentRow.Cells["User_PhoneNum"].Value.ToString();
@@ -168,47 +166,32 @@ namespace Pension_Management_System
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     SqlCommand cmd;
-
                     if (selectedUserId == 0)
                     {
-                        // ADD
-                        string insertQuery = @"
-                INSERT INTO Users 
-                (Role_Id, User_Name, User_Email, User_PhoneNum, Password, IsActive)
-                VALUES 
-                (@RoleID, @UserName, @Email, @Phone, @Password, 1)";
-
+                        string insertQuery = @"INSERT INTO Users (Role_Id, User_Name, User_Email, User_PhoneNum, Password, IsActive) VALUES (@RoleID, @UserName, @Email, @Phone, @Password, 1)";
                         cmd = new SqlCommand(insertQuery, con);
-
                         cmd.Parameters.AddWithValue("@RoleID", cmbRole.SelectedValue);
                         cmd.Parameters.AddWithValue("@UserName", txtName.Text.Trim());
                         cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
                         cmd.Parameters.AddWithValue("@Password", "1234");
+                        MessageBox.Show("A new user added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        // UPDATE
-                        string updateQuery = @"
-                UPDATE Users
-                SET User_Name = @UserName,
-                    User_Email = @Email,
-                    User_PhoneNum = @Phone
-                WHERE User_Id = @Id";
-
+                        string updateQuery = @"UPDATE Users SET User_Name = @UserName, User_Email = @Email, User_PhoneNum = @Phone WHERE User_Id = @Id";
                         cmd = new SqlCommand(updateQuery, con);
-
                         cmd.Parameters.AddWithValue("@Id", selectedUserId);
                         cmd.Parameters.AddWithValue("@UserName", txtName.Text.Trim());
                         cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
+                       
                     }
-
                     con.Open();
                     cmd.ExecuteNonQuery();
-                }
-
+                }                
                 RefreshForm();
+                MessageBox.Show("User information updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -221,11 +204,9 @@ namespace Pension_Management_System
             try
             {
                 if (selectedUserId == 0) return;
-
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query =
-                        "UPDATE Users SET IsActive = 0 WHERE User_Id=@Id";
+                    string query ="UPDATE Users SET IsActive = 0 WHERE User_Id=@Id";
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Id", selectedUserId);
@@ -233,7 +214,7 @@ namespace Pension_Management_System
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
-
+                MessageBox.Show("User deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshForm();
             }
             catch (Exception ex)

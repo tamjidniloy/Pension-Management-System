@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 155);
+            this.label1.Location = new System.Drawing.Point(71, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 49);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(76, 274);
+            this.label2.Location = new System.Drawing.Point(24, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 49);
             this.label2.TabIndex = 1;
@@ -58,7 +58,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(298, 152);
+            this.txtEmail.Location = new System.Drawing.Point(246, 60);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(588, 56);
             this.txtEmail.TabIndex = 2;
@@ -66,7 +66,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(298, 271);
+            this.txtPassword.Location = new System.Drawing.Point(246, 179);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(588, 56);
             this.txtPassword.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_login.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(416, 432);
+            this.btn_login.Location = new System.Drawing.Point(353, 327);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(170, 71);
             this.btn_login.TabIndex = 4;
@@ -87,19 +87,21 @@
             // Login_page
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoScroll = true;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.AutoSize = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1012, 584);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(886, 479);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Login_page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_page";
+            this.Load += new System.EventHandler(this.Login_page_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

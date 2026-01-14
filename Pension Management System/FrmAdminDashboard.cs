@@ -24,13 +24,6 @@ namespace Pension_Management_System
             loginPage.Show();
         }
 
-        private void btnAddEmployee_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Employee_Management addEmployeeForm = new Employee_Management();
-            addEmployeeForm.Show();
-        }
-
         
     }
 }

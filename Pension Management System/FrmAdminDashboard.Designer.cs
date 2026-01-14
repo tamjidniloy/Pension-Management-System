@@ -28,40 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnManageEmployee = new System.Windows.Forms.Button();
+            this.btnManagePensionar = new System.Windows.Forms.Button();
+            this.btnManageAccounts = new System.Windows.Forms.Button();
+            this.btnManagePayment = new System.Windows.Forms.Button();
+            this.btnManageWithdraw = new System.Windows.Forms.Button();
+            this.btnManageReport = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1405, 104);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // btnBack
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 58);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(98, 58);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -73,83 +76,94 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to Admin Portal";
             // 
-            // btnAddEmployee
+            // btnManageEmployee
             // 
-            this.btnAddEmployee.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnAddEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddEmployee.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmployee.Location = new System.Drawing.Point(101, 142);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(320, 64);
-            this.btnAddEmployee.TabIndex = 1;
-            this.btnAddEmployee.Text = "Manage Employees ";
-            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnManageEmployee.AutoSize = true;
+            this.btnManageEmployee.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnManageEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManageEmployee.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnManageEmployee.Location = new System.Drawing.Point(101, 142);
+            this.btnManageEmployee.Name = "btnManageEmployee";
+            this.btnManageEmployee.Size = new System.Drawing.Size(320, 64);
+            this.btnManageEmployee.TabIndex = 1;
+            this.btnManageEmployee.Text = "Manage Employees ";
+            this.btnManageEmployee.UseVisualStyleBackColor = false;
+            this.btnManageEmployee.Click += new System.EventHandler(this.btnManageEmployee_Click);
             // 
-            // button1
+            // btnManagePensionar
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkCyan;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(473, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(364, 64);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Manage Pensioners";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnManagePensionar.AutoSize = true;
+            this.btnManagePensionar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnManagePensionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManagePensionar.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManagePensionar.ForeColor = System.Drawing.Color.White;
+            this.btnManagePensionar.Location = new System.Drawing.Point(473, 142);
+            this.btnManagePensionar.Name = "btnManagePensionar";
+            this.btnManagePensionar.Size = new System.Drawing.Size(364, 64);
+            this.btnManagePensionar.TabIndex = 2;
+            this.btnManagePensionar.Text = "Manage Pensioners";
+            this.btnManagePensionar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnManageAccounts
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkCyan;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(923, 142);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(364, 64);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Pensioner Accounts";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnManageAccounts.AutoSize = true;
+            this.btnManageAccounts.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnManageAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManageAccounts.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageAccounts.ForeColor = System.Drawing.Color.White;
+            this.btnManageAccounts.Location = new System.Drawing.Point(923, 142);
+            this.btnManageAccounts.Name = "btnManageAccounts";
+            this.btnManageAccounts.Size = new System.Drawing.Size(364, 64);
+            this.btnManageAccounts.TabIndex = 3;
+            this.btnManageAccounts.Text = "Pensioner Accounts";
+            this.btnManageAccounts.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnManagePayment
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkCyan;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(473, 292);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(364, 64);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Pension Payments";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnManagePayment.AutoSize = true;
+            this.btnManagePayment.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnManagePayment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManagePayment.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManagePayment.ForeColor = System.Drawing.Color.White;
+            this.btnManagePayment.Location = new System.Drawing.Point(473, 292);
+            this.btnManagePayment.Name = "btnManagePayment";
+            this.btnManagePayment.Size = new System.Drawing.Size(364, 64);
+            this.btnManagePayment.TabIndex = 4;
+            this.btnManagePayment.Text = "Pension Payments";
+            this.btnManagePayment.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnManageWithdraw
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkCyan;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(482, 412);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(364, 64);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Pension Withdraw";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnManageWithdraw.AutoSize = true;
+            this.btnManageWithdraw.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnManageWithdraw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManageWithdraw.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageWithdraw.ForeColor = System.Drawing.Color.White;
+            this.btnManageWithdraw.Location = new System.Drawing.Point(482, 412);
+            this.btnManageWithdraw.Name = "btnManageWithdraw";
+            this.btnManageWithdraw.Size = new System.Drawing.Size(364, 64);
+            this.btnManageWithdraw.TabIndex = 5;
+            this.btnManageWithdraw.Text = "Pension Withdraw";
+            this.btnManageWithdraw.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnManageReport
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkCyan;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(482, 543);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(364, 64);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Pension Withdraw";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnManageReport.AutoSize = true;
+            this.btnManageReport.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnManageReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManageReport.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageReport.ForeColor = System.Drawing.Color.White;
+            this.btnManageReport.Location = new System.Drawing.Point(482, 543);
+            this.btnManageReport.Name = "btnManageReport";
+            this.btnManageReport.Size = new System.Drawing.Size(364, 64);
+            this.btnManageReport.TabIndex = 6;
+            this.btnManageReport.Text = "Pension Report";
+            this.btnManageReport.UseVisualStyleBackColor = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmAdminDashboard
             // 
@@ -159,12 +173,12 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1405, 753);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.btnManageReport);
+            this.Controls.Add(this.btnManageWithdraw);
+            this.Controls.Add(this.btnManagePayment);
+            this.Controls.Add(this.btnManageAccounts);
+            this.Controls.Add(this.btnManagePensionar);
+            this.Controls.Add(this.btnManageEmployee);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmAdminDashboard";
@@ -172,7 +186,9 @@
             this.Text = "FrmAdminDashboard";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -180,12 +196,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAddEmployee;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnManageEmployee;
+        private System.Windows.Forms.Button btnManagePensionar;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnManageAccounts;
+        private System.Windows.Forms.Button btnManagePayment;
+        private System.Windows.Forms.Button btnManageWithdraw;
+        private System.Windows.Forms.Button btnManageReport;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

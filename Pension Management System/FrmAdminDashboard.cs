@@ -24,6 +24,11 @@ namespace Pension_Management_System
             loginPage.Show();
         }
 
-        
+        private void btnManageEmployee_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Employee_Management manageEmployeeForm = new Employee_Management();
+            manageEmployeeForm.Show();
+        }
     }
 }

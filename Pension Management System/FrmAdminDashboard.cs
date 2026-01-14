@@ -33,7 +33,9 @@ namespace Pension_Management_System
 
         private void btnManagePensionar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Pensioner_Management managePensionarForm = new Pensioner_Management();
+            managePensionarForm.Show();
         }
     }
 }

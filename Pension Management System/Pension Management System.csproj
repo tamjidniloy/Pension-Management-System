@@ -77,6 +77,12 @@
     <Compile Include="Login_page.Designer.cs">
       <DependentUpon>Login_page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pensioner_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pensioner_Management.Designer.cs">
+      <DependentUpon>Pensioner_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Samin.cs">
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_page.resx">
       <DependentUpon>Login_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pensioner_Management.resx">
+      <DependentUpon>Pensioner_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

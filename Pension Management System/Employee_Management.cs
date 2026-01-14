@@ -246,6 +246,7 @@ namespace Pension_Management_System
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dgvEmployees.DataSource = dt;
+                    dgvEmployees.ClearSelection();
                 }
             }
             catch (Exception ex)

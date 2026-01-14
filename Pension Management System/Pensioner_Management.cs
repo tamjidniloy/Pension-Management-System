@@ -22,7 +22,6 @@ namespace Pension_Management_System
             LoadPensioners();
             RefreshForm();
         }
-
         private void LoadPensioners()
         {
             try
@@ -73,7 +72,7 @@ namespace Pension_Management_System
             {
                 if (dgvPensioners.CurrentRow == null) return;
                 selectedPensionerId = Convert.ToInt32(dgvPensioners.CurrentRow.Cells["dgvPensioner_Id"].Value);
-                txtPensionerId.Text = dgvPensioners.CurrentRow.Cells["dgvPensioner_Id"].Value.ToString();
+                txtPensionerId.Text = dgvPensioners.CurrentRow.Cells["Pensioner_Id"].Value.ToString();
                 txtName.Text = dgvPensioners.CurrentRow.Cells["Full_Name"].Value.ToString();
                 txtNID.Text = dgvPensioners.CurrentRow.Cells["NID_Num"].Value.ToString();
                 txtPhone.Text = dgvPensioners.CurrentRow.Cells["Phone_Num"].Value.ToString();

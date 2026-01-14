@@ -167,36 +167,42 @@ namespace Pension_Management_System
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query;
                     SqlCommand cmd;
 
                     if (selectedUserId == 0)
                     {
                         // ADD
-                        query = @"INSERT INTO Users
-                          (User_Name, User_Email, User_PhoneNum, Role_Id)
-                          VALUES (@Name, @Email, @Phone, @RoleId)";
+                        string insertQuery = @"
+                INSERT INTO Users 
+                (Role_Id, User_Name, User_Email, User_PhoneNum, Password, IsActive)
+                VALUES 
+                (@RoleID, @UserName, @Email, @Phone, @Password, 1)";
 
-                        cmd = new SqlCommand(query, con);
-                        cmd.Parameters.AddWithValue("@RoleId", cmbRole.SelectedValue);
+                        cmd = new SqlCommand(insertQuery, con);
+
+                        cmd.Parameters.AddWithValue("@RoleID", cmbRole.SelectedValue);
+                        cmd.Parameters.AddWithValue("@UserName", txtName.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Password", "1234");
                     }
                     else
                     {
                         // UPDATE
-                        query = @"UPDATE Users
-                          SET User_Name=@Name,
-                              User_Email=@Email,
-                              User_PhoneNum=@Phone
-                          WHERE User_Id=@Id";
+                        string updateQuery = @"
+                UPDATE Users
+                SET User_Name = @UserName,
+                    User_Email = @Email,
+                    User_PhoneNum = @Phone
+                WHERE User_Id = @Id";
 
-                        cmd = new SqlCommand(query, con);
+                        cmd = new SqlCommand(updateQuery, con);
+
                         cmd.Parameters.AddWithValue("@Id", selectedUserId);
+                        cmd.Parameters.AddWithValue("@UserName", txtName.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
                     }
-
-                    cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
-                    cmd.Parameters.AddWithValue("@RoleId", cmbRole.SelectedValue);
 
                     con.Open();
                     cmd.ExecuteNonQuery();

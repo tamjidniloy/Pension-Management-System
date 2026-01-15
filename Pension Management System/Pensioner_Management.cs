@@ -48,6 +48,7 @@ namespace Pension_Management_System
         private void RefreshForm()
         {
             selectedPensionerId = 0;
+            txtPensionerId.Clear();
             txtName.Clear();
             txtNID.Clear();
             txtPhone.Clear();
@@ -71,7 +72,7 @@ namespace Pension_Management_System
             try
             {
                 if (dgvPensioners.CurrentRow == null) return;
-                selectedPensionerId = Convert.ToInt32(dgvPensioners.CurrentRow.Cells["dgvPensioner_Id"].Value);
+                selectedPensionerId = Convert.ToInt32(dgvPensioners.CurrentRow.Cells["Pensioner_Id"].Value);
                 txtPensionerId.Text = dgvPensioners.CurrentRow.Cells["Pensioner_Id"].Value.ToString();
                 txtName.Text = dgvPensioners.CurrentRow.Cells["Full_Name"].Value.ToString();
                 txtNID.Text = dgvPensioners.CurrentRow.Cells["NID_Num"].Value.ToString();

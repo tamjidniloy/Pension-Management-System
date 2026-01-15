@@ -35,6 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
+            this.dgvUser_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User_PhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlEmployee = new System.Windows.Forms.Panel();
             this.txtRole = new System.Windows.Forms.TextBox();
@@ -54,11 +59,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvUser_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.User_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.User_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.User_PhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.pnlEmployee.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.label2.Font = new System.Drawing.Font("Calibri", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(332, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 54);
+            this.label2.Size = new System.Drawing.Size(271, 53);
             this.label2.TabIndex = 2;
             this.label2.Text = "Employee List";
             // 
@@ -109,12 +109,12 @@
             this.dgvEmployees.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployees.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -132,6 +132,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEmployees.EnableHeadersVisualStyles = false;
             this.dgvEmployees.GridColor = System.Drawing.Color.White;
             this.dgvEmployees.Location = new System.Drawing.Point(9, 293);
             this.dgvEmployees.Margin = new System.Windows.Forms.Padding(0);
@@ -158,13 +159,67 @@
             this.dgvEmployees.VirtualMode = true;
             this.dgvEmployees.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEmployees_CellMouseDoubleClick);
             // 
+            // dgvUser_Id
+            // 
+            this.dgvUser_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvUser_Id.DataPropertyName = "User_Id";
+            this.dgvUser_Id.DividerWidth = 1;
+            this.dgvUser_Id.HeaderText = "User ID";
+            this.dgvUser_Id.MinimumWidth = 6;
+            this.dgvUser_Id.Name = "dgvUser_Id";
+            this.dgvUser_Id.ReadOnly = true;
+            this.dgvUser_Id.Width = 128;
+            // 
+            // Role_Id
+            // 
+            this.Role_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Role_Id.DataPropertyName = "Role_Name";
+            this.Role_Id.DividerWidth = 1;
+            this.Role_Id.HeaderText = "Role";
+            this.Role_Id.MinimumWidth = 6;
+            this.Role_Id.Name = "Role_Id";
+            this.Role_Id.ReadOnly = true;
+            this.Role_Id.Width = 94;
+            // 
+            // User_Name
+            // 
+            this.User_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.User_Name.DataPropertyName = "User_Name";
+            this.User_Name.DividerWidth = 1;
+            this.User_Name.HeaderText = "Name";
+            this.User_Name.MinimumWidth = 6;
+            this.User_Name.Name = "User_Name";
+            this.User_Name.ReadOnly = true;
+            // 
+            // User_Email
+            // 
+            this.User_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.User_Email.DataPropertyName = "User_Email";
+            this.User_Email.DividerWidth = 1;
+            this.User_Email.HeaderText = "Email";
+            this.User_Email.MinimumWidth = 6;
+            this.User_Email.Name = "User_Email";
+            this.User_Email.ReadOnly = true;
+            this.User_Email.Width = 106;
+            // 
+            // User_PhoneNum
+            // 
+            this.User_PhoneNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.User_PhoneNum.DataPropertyName = "User_PhoneNum";
+            this.User_PhoneNum.DividerWidth = 1;
+            this.User_PhoneNum.HeaderText = "Phone Number";
+            this.User_PhoneNum.MinimumWidth = 6;
+            this.User_PhoneNum.Name = "User_PhoneNum";
+            this.User_PhoneNum.ReadOnly = true;
+            this.User_PhoneNum.Width = 218;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1184, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(435, 54);
+            this.label3.Size = new System.Drawing.Size(422, 53);
             this.label3.TabIndex = 5;
             this.label3.Text = "Employee Information";
             // 
@@ -368,60 +423,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1760, 113);
             this.panel1.TabIndex = 0;
-            // 
-            // dgvUser_Id
-            // 
-            this.dgvUser_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvUser_Id.DataPropertyName = "User_Id";
-            this.dgvUser_Id.DividerWidth = 1;
-            this.dgvUser_Id.HeaderText = "User ID";
-            this.dgvUser_Id.MinimumWidth = 6;
-            this.dgvUser_Id.Name = "dgvUser_Id";
-            this.dgvUser_Id.ReadOnly = true;
-            this.dgvUser_Id.Width = 128;
-            // 
-            // Role_Id
-            // 
-            this.Role_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Role_Id.DataPropertyName = "Role_Name";
-            this.Role_Id.DividerWidth = 1;
-            this.Role_Id.HeaderText = "Role";
-            this.Role_Id.MinimumWidth = 6;
-            this.Role_Id.Name = "Role_Id";
-            this.Role_Id.ReadOnly = true;
-            this.Role_Id.Width = 94;
-            // 
-            // User_Name
-            // 
-            this.User_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.User_Name.DataPropertyName = "User_Name";
-            this.User_Name.DividerWidth = 1;
-            this.User_Name.HeaderText = "Name";
-            this.User_Name.MinimumWidth = 6;
-            this.User_Name.Name = "User_Name";
-            this.User_Name.ReadOnly = true;
-            // 
-            // User_Email
-            // 
-            this.User_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.User_Email.DataPropertyName = "User_Email";
-            this.User_Email.DividerWidth = 1;
-            this.User_Email.HeaderText = "Email";
-            this.User_Email.MinimumWidth = 6;
-            this.User_Email.Name = "User_Email";
-            this.User_Email.ReadOnly = true;
-            this.User_Email.Width = 106;
-            // 
-            // User_PhoneNum
-            // 
-            this.User_PhoneNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.User_PhoneNum.DataPropertyName = "User_PhoneNum";
-            this.User_PhoneNum.DividerWidth = 1;
-            this.User_PhoneNum.HeaderText = "Phone Number";
-            this.User_PhoneNum.MinimumWidth = 6;
-            this.User_PhoneNum.Name = "User_PhoneNum";
-            this.User_PhoneNum.ReadOnly = true;
-            this.User_PhoneNum.Width = 218;
             // 
             // Employee_Management
             // 

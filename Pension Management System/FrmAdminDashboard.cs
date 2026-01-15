@@ -37,5 +37,12 @@ namespace Pension_Management_System
             Pensioner_Management managePensionarForm = new Pensioner_Management();
             managePensionarForm.Show();
         }
+
+        private void btnManageAccounts_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Pensioner_Accounts manageAccountsForm = new Pensioner_Accounts();
+            manageAccountsForm.Show();
+        }
     }
 }

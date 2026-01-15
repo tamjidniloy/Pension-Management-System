@@ -119,6 +119,7 @@
             this.btnManageAccounts.TabIndex = 3;
             this.btnManageAccounts.Text = "Pensioner Accounts";
             this.btnManageAccounts.UseVisualStyleBackColor = false;
+            this.btnManageAccounts.Click += new System.EventHandler(this.btnManageAccounts_Click);
             // 
             // btnManagePayment
             // 

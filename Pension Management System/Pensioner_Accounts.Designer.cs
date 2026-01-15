@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -54,9 +54,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPensioners = new System.Windows.Forms.DataGridView();
-            this.Pensioner_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Full_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NID_Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPensionerAccounts = new System.Windows.Forms.DataGridView();
             this.btnSearchAccount = new System.Windows.Forms.Button();
             this.txtSearchPensionerAccount = new System.Windows.Forms.TextBox();
@@ -66,6 +63,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtOldPaymentMethod = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.Pensioner_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Full_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NID_Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PensionerAccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFull_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNID_Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -293,28 +293,28 @@
             this.dgvPensioners.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPensioners.BackgroundColor = System.Drawing.Color.White;
             this.dgvPensioners.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.NullValue = null;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvPensioners.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvPensioners.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPensioners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPensioners.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pensioner_ID,
             this.Full_Name,
             this.NID_Num});
             this.dgvPensioners.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPensioners.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPensioners.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPensioners.EnableHeadersVisualStyles = false;
             this.dgvPensioners.GridColor = System.Drawing.Color.White;
             this.dgvPensioners.Location = new System.Drawing.Point(15, 225);
@@ -322,14 +322,14 @@
             this.dgvPensioners.MultiSelect = false;
             this.dgvPensioners.Name = "dgvPensioners";
             this.dgvPensioners.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPensioners.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPensioners.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPensioners.RowHeadersVisible = false;
             this.dgvPensioners.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvPensioners.RowTemplate.DividerHeight = 1;
@@ -342,40 +342,6 @@
             this.dgvPensioners.VirtualMode = true;
             this.dgvPensioners.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPensioners_CellMouseDoubleClick);
             // 
-            // Pensioner_ID
-            // 
-            this.Pensioner_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Pensioner_ID.DataPropertyName = "Pensioner_ID";
-            this.Pensioner_ID.DividerWidth = 1;
-            this.Pensioner_ID.HeaderText = "Pentioner ID";
-            this.Pensioner_ID.MinimumWidth = 6;
-            this.Pensioner_ID.Name = "Pensioner_ID";
-            this.Pensioner_ID.ReadOnly = true;
-            this.Pensioner_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Pensioner_ID.Width = 187;
-            // 
-            // Full_Name
-            // 
-            this.Full_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Full_Name.DataPropertyName = "Full_Name";
-            this.Full_Name.DividerWidth = 1;
-            this.Full_Name.HeaderText = "Pensioner Name";
-            this.Full_Name.MinimumWidth = 6;
-            this.Full_Name.Name = "Full_Name";
-            this.Full_Name.ReadOnly = true;
-            this.Full_Name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // NID_Num
-            // 
-            this.NID_Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NID_Num.DataPropertyName = "NID_Num";
-            this.NID_Num.DividerWidth = 1;
-            this.NID_Num.HeaderText = "NID Number";
-            this.NID_Num.MinimumWidth = 6;
-            this.NID_Num.Name = "NID_Num";
-            this.NID_Num.ReadOnly = true;
-            this.NID_Num.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // dgvPensionerAccounts
             // 
             this.dgvPensionerAccounts.AllowUserToAddRows = false;
@@ -386,14 +352,14 @@
             this.dgvPensionerAccounts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPensionerAccounts.BackgroundColor = System.Drawing.Color.White;
             this.dgvPensionerAccounts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.NullValue = null;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvPensionerAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvPensionerAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPensionerAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPensionerAccounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PensionerAccountId,
@@ -402,14 +368,14 @@
             this.Monthly_Pension,
             this.Payment_Method_Name});
             this.dgvPensionerAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPensionerAccounts.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPensionerAccounts.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPensionerAccounts.EnableHeadersVisualStyles = false;
             this.dgvPensionerAccounts.GridColor = System.Drawing.Color.White;
             this.dgvPensionerAccounts.Location = new System.Drawing.Point(763, 225);
@@ -417,14 +383,14 @@
             this.dgvPensionerAccounts.MultiSelect = false;
             this.dgvPensionerAccounts.Name = "dgvPensionerAccounts";
             this.dgvPensionerAccounts.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPensionerAccounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPensionerAccounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPensionerAccounts.RowHeadersVisible = false;
             this.dgvPensionerAccounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvPensionerAccounts.RowTemplate.DividerHeight = 1;
@@ -432,7 +398,7 @@
             this.dgvPensionerAccounts.RowTemplate.ReadOnly = true;
             this.dgvPensionerAccounts.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPensionerAccounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPensionerAccounts.Size = new System.Drawing.Size(964, 504);
+            this.dgvPensionerAccounts.Size = new System.Drawing.Size(964, 403);
             this.dgvPensionerAccounts.TabIndex = 8;
             this.dgvPensionerAccounts.VirtualMode = true;
             this.dgvPensionerAccounts.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPensionerAccounts_CellMouseDoubleClick);
@@ -463,7 +429,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(952, 801);
+            this.label10.Location = new System.Drawing.Point(949, 708);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(328, 35);
             this.label10.TabIndex = 20;
@@ -473,7 +439,7 @@
             // 
             this.cmbNewPaymentMethod.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNewPaymentMethod.FormattingEnabled = true;
-            this.cmbNewPaymentMethod.Location = new System.Drawing.Point(1296, 802);
+            this.cmbNewPaymentMethod.Location = new System.Drawing.Point(1293, 709);
             this.cmbNewPaymentMethod.Name = "cmbNewPaymentMethod";
             this.cmbNewPaymentMethod.Size = new System.Drawing.Size(249, 36);
             this.cmbNewPaymentMethod.TabIndex = 20;
@@ -485,7 +451,7 @@
             this.btnUpdatePaymentMethod.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdatePaymentMethod.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdatePaymentMethod.ForeColor = System.Drawing.Color.White;
-            this.btnUpdatePaymentMethod.Location = new System.Drawing.Point(1564, 792);
+            this.btnUpdatePaymentMethod.Location = new System.Drawing.Point(1561, 699);
             this.btnUpdatePaymentMethod.Name = "btnUpdatePaymentMethod";
             this.btnUpdatePaymentMethod.Size = new System.Drawing.Size(141, 50);
             this.btnUpdatePaymentMethod.TabIndex = 20;
@@ -497,7 +463,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(938, 750);
+            this.label11.Location = new System.Drawing.Point(935, 657);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(342, 35);
             this.label11.TabIndex = 20;
@@ -506,7 +472,7 @@
             // txtOldPaymentMethod
             // 
             this.txtOldPaymentMethod.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldPaymentMethod.Location = new System.Drawing.Point(1296, 747);
+            this.txtOldPaymentMethod.Location = new System.Drawing.Point(1293, 654);
             this.txtOldPaymentMethod.Name = "txtOldPaymentMethod";
             this.txtOldPaymentMethod.ReadOnly = true;
             this.txtOldPaymentMethod.Size = new System.Drawing.Size(249, 36);
@@ -527,10 +493,44 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // Pensioner_ID
+            // 
+            this.Pensioner_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Pensioner_ID.DataPropertyName = "Pensioner_Id";
+            this.Pensioner_ID.DividerWidth = 1;
+            this.Pensioner_ID.HeaderText = "Pentioner ID";
+            this.Pensioner_ID.MinimumWidth = 6;
+            this.Pensioner_ID.Name = "Pensioner_ID";
+            this.Pensioner_ID.ReadOnly = true;
+            this.Pensioner_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Pensioner_ID.Width = 187;
+            // 
+            // Full_Name
+            // 
+            this.Full_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Full_Name.DataPropertyName = "Full_Name";
+            this.Full_Name.DividerWidth = 1;
+            this.Full_Name.HeaderText = "Pensioner Name";
+            this.Full_Name.MinimumWidth = 6;
+            this.Full_Name.Name = "Full_Name";
+            this.Full_Name.ReadOnly = true;
+            this.Full_Name.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // NID_Num
+            // 
+            this.NID_Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NID_Num.DataPropertyName = "NID_Num";
+            this.NID_Num.DividerWidth = 1;
+            this.NID_Num.HeaderText = "NID Number";
+            this.NID_Num.MinimumWidth = 6;
+            this.NID_Num.Name = "NID_Num";
+            this.NID_Num.ReadOnly = true;
+            this.NID_Num.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // PensionerAccountId
             // 
             this.PensionerAccountId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PensionerAccountId.DataPropertyName = "PensionerAccountID";
+            this.PensionerAccountId.DataPropertyName = "PensionerAccountId";
             this.PensionerAccountId.DividerWidth = 1;
             this.PensionerAccountId.HeaderText = "Account ID";
             this.PensionerAccountId.MinimumWidth = 6;
@@ -633,9 +633,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvPensioners;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pensioner_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Full_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NID_Num;
         private System.Windows.Forms.DataGridView dgvPensionerAccounts;
         private System.Windows.Forms.Button btnSearchAccount;
         private System.Windows.Forms.TextBox txtSearchPensionerAccount;
@@ -653,6 +650,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtOldPaymentMethod;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pensioner_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Full_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NID_Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn PensionerAccountId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFull_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvNID_Num;

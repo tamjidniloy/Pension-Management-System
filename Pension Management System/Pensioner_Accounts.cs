@@ -113,6 +113,10 @@ namespace Pension_Management_System
                     cmbPaymentMethod.DisplayMember = "Payment_Method_Name";
                     cmbPaymentMethod.ValueMember = "Payment_Method_Id";
                     cmbPaymentMethod.SelectedIndex = -1;
+                    cmbNewPaymentMethod.DataSource = dt.Copy();
+                    cmbNewPaymentMethod.DisplayMember = "Payment_Method_Name";
+                    cmbNewPaymentMethod.ValueMember = "Payment_Method_Id";
+                    cmbNewPaymentMethod.SelectedIndex = -1;
                 }
             }
             catch (Exception ex)
@@ -127,7 +131,7 @@ namespace Pension_Management_System
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = @" SELECT Last_Salary, Service_Years FROM Pensioners WHERE Pensioner_Id = @Id";
+                    string query = @"SELECT Full_Name,NID_Num,Last_Salary,Service_YearsFROM PensionersWHERE Pensioner_Id = @Id";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Id", pensionerId);
                     con.Open();
@@ -136,19 +140,18 @@ namespace Pension_Management_System
                     {
                         decimal lastSalary = Convert.ToDecimal(dr["Last_Salary"]);
                         int serviceYears = Convert.ToInt32(dr["Service_Years"]);
-                        string name = Convert.ToString(dr["name"]);
-                        string nid = Convert.ToString(dr["nid"]);   
+                        txtPensionerName.Text = dr["Full_Name"].ToString();
+                        txtPensionerNID.Text = dr["NID_Num"].ToString();
                         decimal monthlyPension = (lastSalary * serviceYears) / 60;
                         txtMonthlyPension.Text = monthlyPension.ToString("0.00");
-                        txtPensionerName.Text = name;
-                        txtPensionerNID.Text = nid;
                     }
+                    dr.Close();
                 }
                 CheckExistingAccount();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Failed to load pensioner info.\n" + ex.Message);
             }
         }
 
@@ -314,7 +317,7 @@ namespace Pension_Management_System
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
-                MessageBox.Show("Pensioner account created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pension account mayment method updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshForm();
             }
             catch (Exception ex)

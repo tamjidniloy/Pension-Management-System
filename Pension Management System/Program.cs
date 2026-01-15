@@ -16,7 +16,7 @@ namespace Pension_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pensioner_Accounts());
+            Application.Run(new Login_page());
         }
     }
 }

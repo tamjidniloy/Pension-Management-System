@@ -131,22 +131,35 @@ namespace Pension_Management_System
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = @"SELECT Full_Name,NID_Num,Last_Salary,Service_YearsFROM PensionersWHERE Pensioner_Id = @Id";
+                    string query = @"
+            SELECT 
+                Full_Name,
+                NID_Num,
+                Last_Salary,
+                Service_Years
+            FROM Pensioners
+            WHERE Pensioner_Id = @Id";
+
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Id", pensionerId);
+
                     con.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
+
                     if (dr.Read())
                     {
                         decimal lastSalary = Convert.ToDecimal(dr["Last_Salary"]);
                         int serviceYears = Convert.ToInt32(dr["Service_Years"]);
+
                         txtPensionerName.Text = dr["Full_Name"].ToString();
                         txtPensionerNID.Text = dr["NID_Num"].ToString();
+
                         decimal monthlyPension = (lastSalary * serviceYears) / 60;
                         txtMonthlyPension.Text = monthlyPension.ToString("0.00");
                     }
                     dr.Close();
                 }
+
                 CheckExistingAccount();
             }
             catch (Exception ex)

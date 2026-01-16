@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Anindya.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Anindya.Designer.cs">
-      <DependentUpon>Anindya.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +71,12 @@
     <Compile Include="Login_page.Designer.cs">
       <DependentUpon>Login_page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Monthly_Pension_Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monthly_Pension_Process.Designer.cs">
+      <DependentUpon>Monthly_Pension_Process.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pensioner_Accounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,15 +91,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Samin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Samin.Designer.cs">
-      <DependentUpon>Samin.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Anindya.resx">
-      <DependentUpon>Anindya.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Employee_Management.resx">
       <DependentUpon>Employee_Management.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_page.resx">
       <DependentUpon>Login_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Monthly_Pension_Process.resx">
+      <DependentUpon>Monthly_Pension_Process.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pensioner_Accounts.resx">
       <DependentUpon>Pensioner_Accounts.cs</DependentUpon>
@@ -125,9 +119,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Samin.resx">
-      <DependentUpon>Samin.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

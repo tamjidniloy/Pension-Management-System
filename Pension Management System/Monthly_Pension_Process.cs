@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pension_Management_System
 {
-    public partial class Anindya : Form
+    public partial class Monthly_Pension_Process : Form
     {
-        public Anindya()
+        public Monthly_Pension_Process()
         {
             InitializeComponent();
         }

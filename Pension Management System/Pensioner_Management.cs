@@ -30,7 +30,7 @@ namespace Pension_Management_System
                 {
                     string query = @"SELECT Pensioner_Id, Full_Name, NID_Num, Phone_Num, Email, Date_Of_Birth, Retirement_Date, Service_Years, Last_Salary
                              FROM Pensioners
-                             WHERE IsActive = 1";
+                             WHERE IsActive = 1 ORDER BY Pensioner_Id DESC ";
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);

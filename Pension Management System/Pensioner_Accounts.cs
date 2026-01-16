@@ -51,7 +51,14 @@ namespace Pension_Management_System
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = @"SELECT Pensioner_Id, Full_Name, NID_Num FROM Pensioners WHERE IsActive = 1";
+                    string query = @"SELECT 
+                Pensioner_Id, 
+                Full_Name, 
+                NID_Num 
+                FROM Pensioners 
+                WHERE IsActive = 1
+                ORDER BY Pensioner_Id DESC";
+
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -73,16 +80,7 @@ namespace Pension_Management_System
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = @"SELECT 
-                                    pa.PensionerAccountId,
-                                    p.Full_Name,
-                                    p.NID_Num,
-                                    pa.Monthly_Pension,
-                                    pm.Payment_Method_Name
-                                    FROM Pensioner_Accounts pa
-                                    INNER JOIN Pensioners p ON pa.Pensioner_Id = p.Pensioner_Id
-                                    INNER JOIN PaymentMethods pm ON pa.Payment_Method_Id = pm.Payment_Method_Id
-                                    WHERE pa.IsActive = 1";
+                    string query = @"SELECT pa.PensionerAccountId, p.Full_Name, p.NID_Num, pa.Monthly_Pension, pm.Payment_Method_Name FROM Pensioner_Accounts pa INNER JOIN Pensioners p ON pa.Pensioner_Id = p.Pensioner_Id INNER JOIN PaymentMethods pm ON pa.Payment_Method_Id = pm.Payment_Method_Id WHERE pa.IsActive = 1 ORDER BY pa.PensionerAccountId DESC";
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -90,7 +88,6 @@ namespace Pension_Management_System
                     dgvPensionerAccounts.AutoGenerateColumns = false;
                     dgvPensionerAccounts.Refresh();
                     dgvPensionerAccounts.ClearSelection();
-                    dgvPensionerAccounts.Columns["PensionerAccountId"].Visible = false;
                 }
             }
             catch (Exception ex)

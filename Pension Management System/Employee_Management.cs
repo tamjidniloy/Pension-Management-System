@@ -66,7 +66,7 @@ namespace Pension_Management_System
                     U.User_PhoneNum
                     FROM Users U
                     JOIN Roles R ON U.Role_Id = R.Role_Id
-                    WHERE U.IsActive = 1";
+                    WHERE U.IsActive = 1 ORDER by U.User_Id DESC";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataTable dt = new DataTable();

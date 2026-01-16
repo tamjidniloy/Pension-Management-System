@@ -100,6 +100,9 @@
     <EmbeddedResource Include="Login_page.resx">
       <DependentUpon>Login_page.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Monthly_Pension_Process.resx">
+      <DependentUpon>Monthly_Pension_Process.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pensioner_Accounts.resx">
       <DependentUpon>Pensioner_Accounts.cs</DependentUpon>
     </EmbeddedResource>

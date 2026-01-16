@@ -35,7 +35,7 @@ namespace Pension_Management_System
                 }
 
                 string connectionString =
-                    @"Server=NILOY\SQLEXPRESS;
+                    @"Server=Tanha\SQLEXPRESS;
               Initial Catalog=Pension Management System;
               Integrated Security=True;";
 

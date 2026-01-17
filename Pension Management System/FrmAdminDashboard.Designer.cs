@@ -149,6 +149,7 @@
             this.btnManageWithdraw.TabIndex = 5;
             this.btnManageWithdraw.Text = "Pension Withdraw";
             this.btnManageWithdraw.UseVisualStyleBackColor = false;
+            this.btnManageWithdraw.Click += new System.EventHandler(this.btnManageWithdraw_Click);
             // 
             // btnManageReport
             // 

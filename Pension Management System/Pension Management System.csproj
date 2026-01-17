@@ -89,6 +89,12 @@
     <Compile Include="Pensioner_Management.Designer.cs">
       <DependentUpon>Pensioner_Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pension_Withdrawal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pension_Withdrawal.Designer.cs">
+      <DependentUpon>Pension_Withdrawal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Employee_Management.resx">
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pensioner_Management.resx">
       <DependentUpon>Pensioner_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pension_Withdrawal.resx">
+      <DependentUpon>Pension_Withdrawal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -134,6 +134,7 @@
             this.btnManagePayment.TabIndex = 4;
             this.btnManagePayment.Text = "Pension Payments";
             this.btnManagePayment.UseVisualStyleBackColor = false;
+            this.btnManagePayment.Click += new System.EventHandler(this.btnManagePayment_Click);
             // 
             // btnManageWithdraw
             // 

@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.dgvEmployees = new System.Windows.Forms.DataGridView();
-            this.dgvUser_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.User_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.User_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.User_PhoneNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMonthlyStatus = new System.Windows.Forms.DataGridView();
+            this.Pensioner_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Full_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monthly_Pension = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Current_Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Month_Accrued = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Payment_Method_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtUserId = new System.Windows.Forms.TextBox();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.txtRole = new System.Windows.Forms.TextBox();
+            this.txtCurrentBalance = new System.Windows.Forms.TextBox();
+            this.txtTotalAccrued = new System.Windows.Forms.TextBox();
             this.pnlEmployee = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
+            this.txtMethod = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtMonthlyPension = new System.Windows.Forms.TextBox();
+            this.btnRunMonthlyPension = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonthlyStatus)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlEmployee.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtSearch.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(12, 237);
+            this.txtSearch.Location = new System.Drawing.Point(28, 177);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(580, 40);
             this.txtSearch.TabIndex = 1;
@@ -78,127 +78,142 @@
             this.btnSearch.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(614, 234);
+            this.btnSearch.Location = new System.Drawing.Point(630, 174);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(117, 45);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // dgvEmployees
+            // dgvMonthlyStatus
             // 
-            this.dgvEmployees.AllowUserToAddRows = false;
-            this.dgvEmployees.AllowUserToDeleteRows = false;
-            this.dgvEmployees.AllowUserToResizeColumns = false;
-            this.dgvEmployees.AllowUserToResizeRows = false;
-            this.dgvEmployees.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dgvEmployees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvEmployees.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvEmployees.BackgroundColor = System.Drawing.Color.White;
-            this.dgvEmployees.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvEmployees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvUser_Id,
-            this.Role_Id,
-            this.User_Name,
-            this.User_Email,
-            this.User_PhoneNum});
-            this.dgvEmployees.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployees.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmployees.EnableHeadersVisualStyles = false;
-            this.dgvEmployees.GridColor = System.Drawing.Color.White;
-            this.dgvEmployees.Location = new System.Drawing.Point(9, 293);
-            this.dgvEmployees.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvEmployees.MultiSelect = false;
-            this.dgvEmployees.Name = "dgvEmployees";
-            this.dgvEmployees.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployees.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvEmployees.RowHeadersVisible = false;
-            this.dgvEmployees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvEmployees.RowTemplate.DividerHeight = 1;
-            this.dgvEmployees.RowTemplate.Height = 30;
-            this.dgvEmployees.RowTemplate.ReadOnly = true;
-            this.dgvEmployees.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployees.Size = new System.Drawing.Size(952, 505);
-            this.dgvEmployees.TabIndex = 4;
-            this.dgvEmployees.VirtualMode = true;
+            this.dgvMonthlyStatus.AllowUserToAddRows = false;
+            this.dgvMonthlyStatus.AllowUserToDeleteRows = false;
+            this.dgvMonthlyStatus.AllowUserToResizeColumns = false;
+            this.dgvMonthlyStatus.AllowUserToResizeRows = false;
+            this.dgvMonthlyStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dgvMonthlyStatus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMonthlyStatus.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMonthlyStatus.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMonthlyStatus.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvMonthlyStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvMonthlyStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMonthlyStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pensioner_Id,
+            this.Full_Name,
+            this.Monthly_Pension,
+            this.Current_Balance,
+            this.Total_Month_Accrued,
+            this.Payment_Method_Name});
+            this.dgvMonthlyStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMonthlyStatus.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvMonthlyStatus.EnableHeadersVisualStyles = false;
+            this.dgvMonthlyStatus.GridColor = System.Drawing.Color.White;
+            this.dgvMonthlyStatus.Location = new System.Drawing.Point(28, 244);
+            this.dgvMonthlyStatus.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvMonthlyStatus.MultiSelect = false;
+            this.dgvMonthlyStatus.Name = "dgvMonthlyStatus";
+            this.dgvMonthlyStatus.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMonthlyStatus.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvMonthlyStatus.RowHeadersVisible = false;
+            this.dgvMonthlyStatus.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvMonthlyStatus.RowTemplate.DividerHeight = 1;
+            this.dgvMonthlyStatus.RowTemplate.Height = 30;
+            this.dgvMonthlyStatus.RowTemplate.ReadOnly = true;
+            this.dgvMonthlyStatus.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMonthlyStatus.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMonthlyStatus.Size = new System.Drawing.Size(976, 554);
+            this.dgvMonthlyStatus.TabIndex = 4;
+            this.dgvMonthlyStatus.VirtualMode = true;
+            this.dgvMonthlyStatus.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMonthlyStatus_CellMouseDoubleClick);
             // 
-            // dgvUser_Id
+            // Pensioner_Id
             // 
-            this.dgvUser_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvUser_Id.DataPropertyName = "User_Id";
-            this.dgvUser_Id.DividerWidth = 1;
-            this.dgvUser_Id.HeaderText = "User ID";
-            this.dgvUser_Id.MinimumWidth = 6;
-            this.dgvUser_Id.Name = "dgvUser_Id";
-            this.dgvUser_Id.ReadOnly = true;
-            this.dgvUser_Id.Width = 128;
+            this.Pensioner_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Pensioner_Id.DataPropertyName = "Pensioner_Id";
+            this.Pensioner_Id.DividerWidth = 1;
+            this.Pensioner_Id.HeaderText = "ID num";
+            this.Pensioner_Id.MinimumWidth = 6;
+            this.Pensioner_Id.Name = "Pensioner_Id";
+            this.Pensioner_Id.ReadOnly = true;
+            this.Pensioner_Id.Width = 127;
             // 
-            // Role_Id
+            // Full_Name
             // 
-            this.Role_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Role_Id.DataPropertyName = "Role_Name";
-            this.Role_Id.DividerWidth = 1;
-            this.Role_Id.HeaderText = "Role";
-            this.Role_Id.MinimumWidth = 6;
-            this.Role_Id.Name = "Role_Id";
-            this.Role_Id.ReadOnly = true;
-            this.Role_Id.Width = 94;
+            this.Full_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Full_Name.DataPropertyName = "Full_Name";
+            this.Full_Name.DividerWidth = 1;
+            this.Full_Name.HeaderText = "Name";
+            this.Full_Name.MinimumWidth = 6;
+            this.Full_Name.Name = "Full_Name";
+            this.Full_Name.ReadOnly = true;
+            this.Full_Name.Width = 112;
             // 
-            // User_Name
+            // Monthly_Pension
             // 
-            this.User_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.User_Name.DataPropertyName = "User_Name";
-            this.User_Name.DividerWidth = 1;
-            this.User_Name.HeaderText = "Name";
-            this.User_Name.MinimumWidth = 6;
-            this.User_Name.Name = "User_Name";
-            this.User_Name.ReadOnly = true;
+            this.Monthly_Pension.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Monthly_Pension.DataPropertyName = "Monthly_Pension";
+            this.Monthly_Pension.DividerWidth = 1;
+            this.Monthly_Pension.HeaderText = "Monthly Pension";
+            this.Monthly_Pension.MinimumWidth = 6;
+            this.Monthly_Pension.Name = "Monthly_Pension";
+            this.Monthly_Pension.ReadOnly = true;
+            this.Monthly_Pension.Width = 237;
             // 
-            // User_Email
+            // Current_Balance
             // 
-            this.User_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.User_Email.DataPropertyName = "User_Email";
-            this.User_Email.DividerWidth = 1;
-            this.User_Email.HeaderText = "Email";
-            this.User_Email.MinimumWidth = 6;
-            this.User_Email.Name = "User_Email";
-            this.User_Email.ReadOnly = true;
-            this.User_Email.Width = 106;
+            this.Current_Balance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Current_Balance.DataPropertyName = "Current_Balance";
+            this.Current_Balance.DividerWidth = 1;
+            this.Current_Balance.HeaderText = "Current Balance";
+            this.Current_Balance.MinimumWidth = 6;
+            this.Current_Balance.Name = "Current_Balance";
+            this.Current_Balance.ReadOnly = true;
+            this.Current_Balance.Width = 227;
             // 
-            // User_PhoneNum
+            // Total_Month_Accrued
             // 
-            this.User_PhoneNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.User_PhoneNum.DataPropertyName = "User_PhoneNum";
-            this.User_PhoneNum.DividerWidth = 1;
-            this.User_PhoneNum.HeaderText = "Phone Number";
-            this.User_PhoneNum.MinimumWidth = 6;
-            this.User_PhoneNum.Name = "User_PhoneNum";
-            this.User_PhoneNum.ReadOnly = true;
-            this.User_PhoneNum.Width = 218;
+            this.Total_Month_Accrued.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Total_Month_Accrued.DataPropertyName = "Total_Month_Accrued";
+            this.Total_Month_Accrued.DividerWidth = 1;
+            this.Total_Month_Accrued.HeaderText = "Months";
+            this.Total_Month_Accrued.MinimumWidth = 6;
+            this.Total_Month_Accrued.Name = "Total_Month_Accrued";
+            this.Total_Month_Accrued.ReadOnly = true;
+            this.Total_Month_Accrued.Width = 134;
+            // 
+            // Payment_Method_Name
+            // 
+            this.Payment_Method_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Payment_Method_Name.DataPropertyName = "Payment_Method_Name";
+            this.Payment_Method_Name.DividerWidth = 1;
+            this.Payment_Method_Name.HeaderText = "Method";
+            this.Payment_Method_Name.MinimumWidth = 6;
+            this.Payment_Method_Name.Name = "Payment_Method_Name";
+            this.Payment_Method_Name.ReadOnly = true;
+            this.Payment_Method_Name.Width = 137;
             // 
             // label1
             // 
@@ -221,6 +236,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -229,18 +245,8 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1760, 113);
+            this.panel1.Size = new System.Drawing.Size(1795, 113);
             this.panel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(332, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(271, 53);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Employee List";
             // 
             // label4
             // 
@@ -248,139 +254,67 @@
             this.label4.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(23, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 40);
+            this.label4.Size = new System.Drawing.Size(215, 40);
             this.label4.TabIndex = 0;
-            this.label4.Text = "User ID : ";
+            this.label4.Text = "Pensioner ID : ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 93);
+            this.label5.Location = new System.Drawing.Point(23, 92);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 40);
+            this.label5.Size = new System.Drawing.Size(122, 40);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Role : ";
+            this.label5.Text = "Name : ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 156);
+            this.label6.Location = new System.Drawing.Point(23, 149);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 40);
+            this.label6.Size = new System.Drawing.Size(274, 40);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Name : ";
+            this.label6.Text = "Monthly Pension : ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 216);
+            this.label7.Location = new System.Drawing.Point(23, 206);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 40);
+            this.label7.Size = new System.Drawing.Size(260, 40);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Email : ";
+            this.label7.Text = "Current Balance : ";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 271);
+            this.label8.Location = new System.Drawing.Point(23, 263);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(203, 40);
+            this.label8.Size = new System.Drawing.Size(303, 40);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Phone Num : ";
+            this.label8.Text = "Number of Months : ";
             // 
-            // txtEmail
+            // txtCurrentBalance
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(237, 215);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(410, 44);
-            this.txtEmail.TabIndex = 8;
+            this.txtCurrentBalance.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentBalance.Location = new System.Drawing.Point(358, 208);
+            this.txtCurrentBalance.Name = "txtCurrentBalance";
+            this.txtCurrentBalance.ReadOnly = true;
+            this.txtCurrentBalance.Size = new System.Drawing.Size(310, 40);
+            this.txtCurrentBalance.TabIndex = 11;
             // 
-            // txtPhone
+            // txtTotalAccrued
             // 
-            this.txtPhone.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(237, 270);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(410, 44);
-            this.txtPhone.TabIndex = 9;
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(237, 155);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(410, 44);
-            this.txtName.TabIndex = 10;
-            // 
-            // txtUserId
-            // 
-            this.txtUserId.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserId.Location = new System.Drawing.Point(237, 34);
-            this.txtUserId.Name = "txtUserId";
-            this.txtUserId.ReadOnly = true;
-            this.txtUserId.Size = new System.Drawing.Size(410, 44);
-            this.txtUserId.TabIndex = 11;
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(237, 95);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(184, 41);
-            this.cmbRole.TabIndex = 12;
-            // 
-            // btnSave
-            // 
-            this.btnSave.AutoSize = true;
-            this.btnSave.BackColor = System.Drawing.Color.LightGreen;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(271, 373);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(117, 45);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AutoSize = true;
-            this.btnDelete.BackColor = System.Drawing.Color.Salmon;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(434, 373);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(117, 45);
-            this.btnDelete.TabIndex = 13;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AutoSize = true;
-            this.btnRefresh.BackColor = System.Drawing.Color.Orange;
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(352, 444);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(117, 45);
-            this.btnRefresh.TabIndex = 14;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            // 
-            // txtRole
-            // 
-            this.txtRole.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRole.Location = new System.Drawing.Point(237, 95);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.ReadOnly = true;
-            this.txtRole.Size = new System.Drawing.Size(410, 44);
-            this.txtRole.TabIndex = 15;
+            this.txtTotalAccrued.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalAccrued.Location = new System.Drawing.Point(358, 265);
+            this.txtTotalAccrued.Name = "txtTotalAccrued";
+            this.txtTotalAccrued.ReadOnly = true;
+            this.txtTotalAccrued.Size = new System.Drawing.Size(310, 40);
+            this.txtTotalAccrued.TabIndex = 15;
             // 
             // pnlEmployee
             // 
@@ -388,24 +322,96 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlEmployee.BackColor = System.Drawing.Color.LightYellow;
             this.pnlEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEmployee.Controls.Add(this.txtRole);
-            this.pnlEmployee.Controls.Add(this.btnRefresh);
-            this.pnlEmployee.Controls.Add(this.btnDelete);
-            this.pnlEmployee.Controls.Add(this.btnSave);
-            this.pnlEmployee.Controls.Add(this.cmbRole);
-            this.pnlEmployee.Controls.Add(this.txtUserId);
+            this.pnlEmployee.Controls.Add(this.txtMethod);
+            this.pnlEmployee.Controls.Add(this.label2);
+            this.pnlEmployee.Controls.Add(this.txtID);
             this.pnlEmployee.Controls.Add(this.txtName);
-            this.pnlEmployee.Controls.Add(this.txtPhone);
-            this.pnlEmployee.Controls.Add(this.txtEmail);
+            this.pnlEmployee.Controls.Add(this.txtMonthlyPension);
+            this.pnlEmployee.Controls.Add(this.txtTotalAccrued);
+            this.pnlEmployee.Controls.Add(this.txtCurrentBalance);
             this.pnlEmployee.Controls.Add(this.label8);
             this.pnlEmployee.Controls.Add(this.label7);
             this.pnlEmployee.Controls.Add(this.label6);
             this.pnlEmployee.Controls.Add(this.label5);
             this.pnlEmployee.Controls.Add(this.label4);
-            this.pnlEmployee.Location = new System.Drawing.Point(1021, 191);
+            this.pnlEmployee.Location = new System.Drawing.Point(1068, 244);
             this.pnlEmployee.Name = "pnlEmployee";
-            this.pnlEmployee.Size = new System.Drawing.Size(729, 607);
+            this.pnlEmployee.Size = new System.Drawing.Size(701, 554);
             this.pnlEmployee.TabIndex = 6;
+            // 
+            // txtMethod
+            // 
+            this.txtMethod.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMethod.Location = new System.Drawing.Point(358, 322);
+            this.txtMethod.Name = "txtMethod";
+            this.txtMethod.ReadOnly = true;
+            this.txtMethod.Size = new System.Drawing.Size(310, 40);
+            this.txtMethod.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 320);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(279, 40);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Payment Method : ";
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(358, 37);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(310, 40);
+            this.txtID.TabIndex = 18;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(358, 94);
+            this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
+            this.txtName.Size = new System.Drawing.Size(310, 40);
+            this.txtName.TabIndex = 17;
+            // 
+            // txtMonthlyPension
+            // 
+            this.txtMonthlyPension.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonthlyPension.Location = new System.Drawing.Point(358, 151);
+            this.txtMonthlyPension.Name = "txtMonthlyPension";
+            this.txtMonthlyPension.ReadOnly = true;
+            this.txtMonthlyPension.Size = new System.Drawing.Size(310, 40);
+            this.txtMonthlyPension.TabIndex = 16;
+            // 
+            // btnRunMonthlyPension
+            // 
+            this.btnRunMonthlyPension.AutoSize = true;
+            this.btnRunMonthlyPension.BackColor = System.Drawing.Color.LightGreen;
+            this.btnRunMonthlyPension.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRunMonthlyPension.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRunMonthlyPension.Location = new System.Drawing.Point(900, 166);
+            this.btnRunMonthlyPension.Name = "btnRunMonthlyPension";
+            this.btnRunMonthlyPension.Size = new System.Drawing.Size(329, 51);
+            this.btnRunMonthlyPension.TabIndex = 7;
+            this.btnRunMonthlyPension.Text = "Run Monthly Pension";
+            this.btnRunMonthlyPension.UseVisualStyleBackColor = false;
+            this.btnRunMonthlyPension.Click += new System.EventHandler(this.btnRunMonthlyPension_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.BackColor = System.Drawing.Color.Orange;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(1635, 166);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(117, 45);
+            this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // Monthly_Pension_Process
             // 
@@ -414,17 +420,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1762, 822);
+            this.ClientSize = new System.Drawing.Size(1796, 822);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnRunMonthlyPension);
             this.Controls.Add(this.pnlEmployee);
-            this.Controls.Add(this.dgvEmployees);
+            this.Controls.Add(this.dgvMonthlyStatus);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.panel1);
             this.Name = "Monthly_Pension_Process";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee_Management";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
+            this.Load += new System.EventHandler(this.Monthly_Pension_Process_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonthlyStatus)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlEmployee.ResumeLayout(false);
@@ -437,30 +445,30 @@
         #endregion
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridView dgvEmployees;
+        private System.Windows.Forms.DataGridView dgvMonthlyStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvUser_Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role_Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn User_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn User_Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn User_PhoneNum;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtUserId;
-        private System.Windows.Forms.ComboBox cmbRole;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.TextBox txtRole;
+        private System.Windows.Forms.TextBox txtCurrentBalance;
+        private System.Windows.Forms.TextBox txtTotalAccrued;
         private System.Windows.Forms.Panel pnlEmployee;
+        private System.Windows.Forms.TextBox txtMonthlyPension;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnRunMonthlyPension;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtMethod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pensioner_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Full_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monthly_Pension;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Current_Balance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Month_Accrued;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Payment_Method_Name;
     }   
 }

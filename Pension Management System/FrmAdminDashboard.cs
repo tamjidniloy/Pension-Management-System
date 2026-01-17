@@ -44,5 +44,12 @@ namespace Pension_Management_System
             Pensioner_Accounts manageAccountsForm = new Pensioner_Accounts();
             manageAccountsForm.Show();
         }
+
+        private void btnManagePayment_Click(object sender, EventArgs e)
+        {
+            Monthly_Pension_Process frm = new Monthly_Pension_Process(this);
+            this.Hide();
+            frm.Show();
+        }
     }
 }

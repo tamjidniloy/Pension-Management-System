@@ -28,47 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvAccounts = new System.Windows.Forms.DataGridView();
+            this.PensionerAccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pensioner_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Full_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Current_Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Payment_Method_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NID_Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlEmployee = new System.Windows.Forms.Panel();
+            this.txtPensionerID = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtWithdrawAmount = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtAccountId = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtNIDnum = new System.Windows.Forms.TextBox();
+            this.txtBalance = new System.Windows.Forms.TextBox();
+            this.txtPaymentMethod = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlCash = new System.Windows.Forms.Panel();
+            this.btnWithdrawCash = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtPaymentMethod = new System.Windows.Forms.TextBox();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.txtNIDnum = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtAccountId = new System.Windows.Forms.TextBox();
             this.pnlBank = new System.Windows.Forms.Panel();
-            this.btnWithdrawCash = new System.Windows.Forms.Button();
-            this.txtWithdrawAmount = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnTransferBank = new System.Windows.Forms.Button();
-            this.txtBankAccount = new System.Windows.Forms.TextBox();
             this.cmbBank = new System.Windows.Forms.ComboBox();
+            this.txtBankAccount = new System.Windows.Forms.TextBox();
+            this.btnTransferBank = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnlMFS = new System.Windows.Forms.Panel();
             this.txtMFSPhone = new System.Windows.Forms.TextBox();
             this.btnTransferMFS = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.PensionerAccountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Full_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NID_Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Current_Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Payment_Method_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
             this.pnlEmployee.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,12 +84,11 @@
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtSearch.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(184, 153);
+            this.txtSearch.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(152, 155);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(580, 40);
+            this.txtSearch.Size = new System.Drawing.Size(379, 36);
             this.txtSearch.TabIndex = 1;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvAccounts
             // 
@@ -97,30 +100,31 @@
             this.dgvAccounts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAccounts.BackgroundColor = System.Drawing.Color.White;
             this.dgvAccounts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.NullValue = null;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.NullValue = null;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PensionerAccountId,
+            this.Pensioner_Id,
             this.Full_Name,
-            this.NID_Num,
             this.Current_Balance,
-            this.Payment_Method_Name});
+            this.Payment_Method_Name,
+            this.NID_Num});
             this.dgvAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAccounts.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAccounts.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvAccounts.EnableHeadersVisualStyles = false;
             this.dgvAccounts.GridColor = System.Drawing.Color.White;
             this.dgvAccounts.Location = new System.Drawing.Point(36, 242);
@@ -128,14 +132,14 @@
             this.dgvAccounts.MultiSelect = false;
             this.dgvAccounts.Name = "dgvAccounts";
             this.dgvAccounts.ReadOnly = true;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvAccounts.RowHeadersVisible = false;
             this.dgvAccounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvAccounts.RowTemplate.DividerHeight = 1;
@@ -148,10 +152,78 @@
             this.dgvAccounts.VirtualMode = true;
             this.dgvAccounts.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAccounts_CellMouseDoubleClick);
             // 
+            // PensionerAccountId
+            // 
+            this.PensionerAccountId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.PensionerAccountId.DataPropertyName = "PensionerAccountId";
+            this.PensionerAccountId.DividerWidth = 1;
+            this.PensionerAccountId.HeaderText = "Account Num";
+            this.PensionerAccountId.MinimumWidth = 6;
+            this.PensionerAccountId.Name = "PensionerAccountId";
+            this.PensionerAccountId.ReadOnly = true;
+            this.PensionerAccountId.Width = 200;
+            // 
+            // Pensioner_Id
+            // 
+            this.Pensioner_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Pensioner_Id.DataPropertyName = "Pensioner_Id";
+            this.Pensioner_Id.DividerWidth = 1;
+            this.Pensioner_Id.HeaderText = "Pensioner ID";
+            this.Pensioner_Id.MinimumWidth = 6;
+            this.Pensioner_Id.Name = "Pensioner_Id";
+            this.Pensioner_Id.ReadOnly = true;
+            this.Pensioner_Id.Width = 188;
+            // 
+            // Full_Name
+            // 
+            this.Full_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Full_Name.DataPropertyName = "Full_Name";
+            this.Full_Name.DividerWidth = 1;
+            this.Full_Name.HeaderText = "Full Name";
+            this.Full_Name.MinimumWidth = 6;
+            this.Full_Name.Name = "Full_Name";
+            this.Full_Name.ReadOnly = true;
+            this.Full_Name.Width = 158;
+            // 
+            // Current_Balance
+            // 
+            this.Current_Balance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Current_Balance.DataPropertyName = "Current_Balance";
+            this.Current_Balance.DividerWidth = 1;
+            this.Current_Balance.HeaderText = "Balance";
+            this.Current_Balance.MinimumWidth = 6;
+            this.Current_Balance.Name = "Current_Balance";
+            this.Current_Balance.ReadOnly = true;
+            this.Current_Balance.Width = 133;
+            // 
+            // Payment_Method_Name
+            // 
+            this.Payment_Method_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Payment_Method_Name.DataPropertyName = "Payment_Method_Name";
+            this.Payment_Method_Name.DividerWidth = 1;
+            this.Payment_Method_Name.HeaderText = "Method";
+            this.Payment_Method_Name.MinimumWidth = 6;
+            this.Payment_Method_Name.Name = "Payment_Method_Name";
+            this.Payment_Method_Name.ReadOnly = true;
+            this.Payment_Method_Name.Width = 137;
+            // 
+            // NID_Num
+            // 
+            this.NID_Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.NID_Num.DataPropertyName = "NID_Num";
+            this.NID_Num.DividerWidth = 1;
+            this.NID_Num.HeaderText = "NID Num";
+            this.NID_Num.MinimumWidth = 6;
+            this.NID_Num.Name = "NID_Num";
+            this.NID_Num.ReadOnly = true;
+            this.NID_Num.Width = 148;
+            // 
             // pnlEmployee
             // 
             this.pnlEmployee.BackColor = System.Drawing.Color.LightYellow;
             this.pnlEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEmployee.Controls.Add(this.txtPensionerID);
+            this.pnlEmployee.Controls.Add(this.label13);
             this.pnlEmployee.Controls.Add(this.txtWithdrawAmount);
             this.pnlEmployee.Controls.Add(this.label9);
             this.pnlEmployee.Controls.Add(this.txtAccountId);
@@ -168,6 +240,138 @@
             this.pnlEmployee.Name = "pnlEmployee";
             this.pnlEmployee.Size = new System.Drawing.Size(690, 403);
             this.pnlEmployee.TabIndex = 6;
+            // 
+            // txtPensionerID
+            // 
+            this.txtPensionerID.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPensionerID.Location = new System.Drawing.Point(271, 65);
+            this.txtPensionerID.Name = "txtPensionerID";
+            this.txtPensionerID.ReadOnly = true;
+            this.txtPensionerID.Size = new System.Drawing.Size(380, 36);
+            this.txtPensionerID.TabIndex = 19;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(14, 64);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(176, 35);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Pensioner ID :";
+            // 
+            // txtWithdrawAmount
+            // 
+            this.txtWithdrawAmount.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWithdrawAmount.Location = new System.Drawing.Point(353, 337);
+            this.txtWithdrawAmount.Name = "txtWithdrawAmount";
+            this.txtWithdrawAmount.Size = new System.Drawing.Size(237, 40);
+            this.txtWithdrawAmount.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(19, 340);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(315, 35);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Enter Withdraw Amount :";
+            // 
+            // txtAccountId
+            // 
+            this.txtAccountId.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccountId.Location = new System.Drawing.Point(271, 11);
+            this.txtAccountId.Name = "txtAccountId";
+            this.txtAccountId.ReadOnly = true;
+            this.txtAccountId.Size = new System.Drawing.Size(380, 36);
+            this.txtAccountId.TabIndex = 9;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(271, 114);
+            this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
+            this.txtName.Size = new System.Drawing.Size(380, 36);
+            this.txtName.TabIndex = 8;
+            // 
+            // txtNIDnum
+            // 
+            this.txtNIDnum.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNIDnum.Location = new System.Drawing.Point(271, 170);
+            this.txtNIDnum.Name = "txtNIDnum";
+            this.txtNIDnum.ReadOnly = true;
+            this.txtNIDnum.Size = new System.Drawing.Size(380, 36);
+            this.txtNIDnum.TabIndex = 7;
+            // 
+            // txtBalance
+            // 
+            this.txtBalance.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBalance.Location = new System.Drawing.Point(271, 225);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.ReadOnly = true;
+            this.txtBalance.Size = new System.Drawing.Size(380, 36);
+            this.txtBalance.TabIndex = 6;
+            // 
+            // txtPaymentMethod
+            // 
+            this.txtPaymentMethod.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaymentMethod.Location = new System.Drawing.Point(271, 281);
+            this.txtPaymentMethod.Name = "txtPaymentMethod";
+            this.txtPaymentMethod.ReadOnly = true;
+            this.txtPaymentMethod.Size = new System.Drawing.Size(380, 36);
+            this.txtPaymentMethod.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(19, 280);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(230, 35);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Payment Method :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(19, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(216, 35);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Current Balance :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 169);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 35);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "NID num :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 35);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Full Name :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(187, 35);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Account Num :";
             // 
             // label1
             // 
@@ -209,16 +413,30 @@
             this.pnlCash.Controls.Add(this.btnWithdrawCash);
             this.pnlCash.Location = new System.Drawing.Point(1036, 620);
             this.pnlCash.Name = "pnlCash";
-            this.pnlCash.Size = new System.Drawing.Size(690, 100);
+            this.pnlCash.Size = new System.Drawing.Size(690, 60);
             this.pnlCash.TabIndex = 7;
+            // 
+            // btnWithdrawCash
+            // 
+            this.btnWithdrawCash.AutoSize = true;
+            this.btnWithdrawCash.BackColor = System.Drawing.Color.LightGreen;
+            this.btnWithdrawCash.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWithdrawCash.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWithdrawCash.Location = new System.Drawing.Point(234, 3);
+            this.btnWithdrawCash.Name = "btnWithdrawCash";
+            this.btnWithdrawCash.Size = new System.Drawing.Size(212, 51);
+            this.btnWithdrawCash.TabIndex = 12;
+            this.btnWithdrawCash.Text = "Withdraw";
+            this.btnWithdrawCash.UseVisualStyleBackColor = false;
+            this.btnWithdrawCash.Click += new System.EventHandler(this.btnWithdrawCash_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(39, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 45);
+            this.label2.Size = new System.Drawing.Size(107, 35);
             this.label2.TabIndex = 8;
             this.label2.Text = "Search :";
             // 
@@ -232,101 +450,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Pensioner Account Info";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 35);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Account Name :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 35);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Full Name :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 147);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 35);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "NID num :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 203);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 35);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Current Balance :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 259);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(230, 35);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Payment Method :";
-            // 
-            // txtPaymentMethod
-            // 
-            this.txtPaymentMethod.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaymentMethod.Location = new System.Drawing.Point(271, 260);
-            this.txtPaymentMethod.Name = "txtPaymentMethod";
-            this.txtPaymentMethod.ReadOnly = true;
-            this.txtPaymentMethod.Size = new System.Drawing.Size(380, 36);
-            this.txtPaymentMethod.TabIndex = 5;
-            // 
-            // txtBalance
-            // 
-            this.txtBalance.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBalance.Location = new System.Drawing.Point(271, 204);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.ReadOnly = true;
-            this.txtBalance.Size = new System.Drawing.Size(380, 36);
-            this.txtBalance.TabIndex = 6;
-            // 
-            // txtNIDnum
-            // 
-            this.txtNIDnum.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNIDnum.Location = new System.Drawing.Point(271, 148);
-            this.txtNIDnum.Name = "txtNIDnum";
-            this.txtNIDnum.ReadOnly = true;
-            this.txtNIDnum.Size = new System.Drawing.Size(380, 36);
-            this.txtNIDnum.TabIndex = 7;
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(271, 92);
-            this.txtName.Name = "txtName";
-            this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(380, 36);
-            this.txtName.TabIndex = 8;
-            // 
-            // txtAccountId
-            // 
-            this.txtAccountId.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccountId.Location = new System.Drawing.Point(271, 36);
-            this.txtAccountId.Name = "txtAccountId";
-            this.txtAccountId.ReadOnly = true;
-            this.txtAccountId.Size = new System.Drawing.Size(380, 36);
-            this.txtAccountId.TabIndex = 9;
-            // 
             // pnlBank
             // 
             this.pnlBank.BackColor = System.Drawing.Color.LightYellow;
@@ -336,63 +459,27 @@
             this.pnlBank.Controls.Add(this.btnTransferBank);
             this.pnlBank.Controls.Add(this.label11);
             this.pnlBank.Controls.Add(this.label10);
-            this.pnlBank.Location = new System.Drawing.Point(1032, 644);
+            this.pnlBank.Location = new System.Drawing.Point(1013, 656);
             this.pnlBank.Name = "pnlBank";
             this.pnlBank.Size = new System.Drawing.Size(690, 192);
             this.pnlBank.TabIndex = 8;
             // 
-            // btnWithdrawCash
+            // cmbBank
             // 
-            this.btnWithdrawCash.AutoEllipsis = true;
-            this.btnWithdrawCash.AutoSize = true;
-            this.btnWithdrawCash.BackColor = System.Drawing.Color.LightGreen;
-            this.btnWithdrawCash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWithdrawCash.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWithdrawCash.Location = new System.Drawing.Point(253, 24);
-            this.btnWithdrawCash.Name = "btnWithdrawCash";
-            this.btnWithdrawCash.Size = new System.Drawing.Size(212, 51);
-            this.btnWithdrawCash.TabIndex = 12;
-            this.btnWithdrawCash.Text = "Withdraw";
-            this.btnWithdrawCash.UseVisualStyleBackColor = false;
-            this.btnWithdrawCash.Click += new System.EventHandler(this.btnWithdrawCash_Click);
+            this.cmbBank.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBank.FormattingEnabled = true;
+            this.cmbBank.Location = new System.Drawing.Point(281, 17);
+            this.cmbBank.Name = "cmbBank";
+            this.cmbBank.Size = new System.Drawing.Size(226, 41);
+            this.cmbBank.TabIndex = 19;
             // 
-            // txtWithdrawAmount
+            // txtBankAccount
             // 
-            this.txtWithdrawAmount.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWithdrawAmount.Location = new System.Drawing.Point(353, 337);
-            this.txtWithdrawAmount.Name = "txtWithdrawAmount";
-            this.txtWithdrawAmount.Size = new System.Drawing.Size(237, 40);
-            this.txtWithdrawAmount.TabIndex = 17;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 340);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(315, 35);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Enter Withdraw Amount :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(163, 35);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Select Bank :";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 72);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(251, 35);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Bank Account Num :";
+            this.txtBankAccount.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBankAccount.Location = new System.Drawing.Point(281, 69);
+            this.txtBankAccount.Name = "txtBankAccount";
+            this.txtBankAccount.Size = new System.Drawing.Size(391, 40);
+            this.txtBankAccount.TabIndex = 18;
             // 
             // btnTransferBank
             // 
@@ -408,22 +495,25 @@
             this.btnTransferBank.UseVisualStyleBackColor = false;
             this.btnTransferBank.Click += new System.EventHandler(this.btnTransferBank_Click);
             // 
-            // txtBankAccount
+            // label11
             // 
-            this.txtBankAccount.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBankAccount.Location = new System.Drawing.Point(281, 69);
-            this.txtBankAccount.Name = "txtBankAccount";
-            this.txtBankAccount.Size = new System.Drawing.Size(391, 40);
-            this.txtBankAccount.TabIndex = 18;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(15, 72);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(251, 35);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Bank Account Num :";
             // 
-            // cmbBank
+            // label10
             // 
-            this.cmbBank.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbBank.FormattingEnabled = true;
-            this.cmbBank.Location = new System.Drawing.Point(281, 17);
-            this.cmbBank.Name = "cmbBank";
-            this.cmbBank.Size = new System.Drawing.Size(226, 41);
-            this.cmbBank.TabIndex = 19;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(15, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(163, 35);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Select Bank :";
             // 
             // pnlMFS
             // 
@@ -432,9 +522,9 @@
             this.pnlMFS.Controls.Add(this.txtMFSPhone);
             this.pnlMFS.Controls.Add(this.btnTransferMFS);
             this.pnlMFS.Controls.Add(this.label12);
-            this.pnlMFS.Location = new System.Drawing.Point(1032, 631);
+            this.pnlMFS.Location = new System.Drawing.Point(1036, 635);
             this.pnlMFS.Name = "pnlMFS";
-            this.pnlMFS.Size = new System.Drawing.Size(690, 192);
+            this.pnlMFS.Size = new System.Drawing.Size(690, 198);
             this.pnlMFS.TabIndex = 9;
             // 
             // txtMFSPhone
@@ -475,7 +565,7 @@
             this.btnRefresh.BackColor = System.Drawing.Color.Orange;
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(932, 148);
+            this.btnRefresh.Location = new System.Drawing.Point(979, 148);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(117, 45);
             this.btnRefresh.TabIndex = 16;
@@ -483,59 +573,19 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // PensionerAccountId
+            // button2
             // 
-            this.PensionerAccountId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.PensionerAccountId.DataPropertyName = "PensionerAccountId";
-            this.PensionerAccountId.DividerWidth = 1;
-            this.PensionerAccountId.HeaderText = "Account Num";
-            this.PensionerAccountId.MinimumWidth = 6;
-            this.PensionerAccountId.Name = "PensionerAccountId";
-            this.PensionerAccountId.ReadOnly = true;
-            this.PensionerAccountId.Width = 200;
-            // 
-            // Full_Name
-            // 
-            this.Full_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Full_Name.DataPropertyName = "Full_Name";
-            this.Full_Name.DividerWidth = 1;
-            this.Full_Name.HeaderText = "Full Name";
-            this.Full_Name.MinimumWidth = 6;
-            this.Full_Name.Name = "Full_Name";
-            this.Full_Name.ReadOnly = true;
-            // 
-            // NID_Num
-            // 
-            this.NID_Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.NID_Num.DataPropertyName = "NID_Num";
-            this.NID_Num.DividerWidth = 1;
-            this.NID_Num.HeaderText = "NID Num";
-            this.NID_Num.MinimumWidth = 6;
-            this.NID_Num.Name = "NID_Num";
-            this.NID_Num.ReadOnly = true;
-            this.NID_Num.Width = 148;
-            // 
-            // Current_Balance
-            // 
-            this.Current_Balance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Current_Balance.DataPropertyName = "Current_Balance";
-            this.Current_Balance.DividerWidth = 1;
-            this.Current_Balance.HeaderText = "Balance";
-            this.Current_Balance.MinimumWidth = 6;
-            this.Current_Balance.Name = "Current_Balance";
-            this.Current_Balance.ReadOnly = true;
-            this.Current_Balance.Width = 133;
-            // 
-            // Payment_Method_Name
-            // 
-            this.Payment_Method_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Payment_Method_Name.DataPropertyName = "Payment_Method_Name";
-            this.Payment_Method_Name.DividerWidth = 1;
-            this.Payment_Method_Name.HeaderText = "Method";
-            this.Payment_Method_Name.MinimumWidth = 6;
-            this.Payment_Method_Name.Name = "Payment_Method_Name";
-            this.Payment_Method_Name.ReadOnly = true;
-            this.Payment_Method_Name.Width = 137;
+            this.button2.AutoSize = true;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(549, 148);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 45);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Pension_Withdrawal
             // 
@@ -545,6 +595,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1762, 884);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.pnlMFS);
             this.Controls.Add(this.pnlBank);
@@ -610,9 +661,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn PensionerAccountId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pensioner_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Full_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NID_Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn Current_Balance;
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment_Method_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NID_Num;
+        private System.Windows.Forms.TextBox txtPensionerID;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button2;
     }
 }

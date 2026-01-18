@@ -15,13 +15,14 @@ namespace Pension_Management_System
     public partial class Pensioner_Management : Form
     {
         int selectedPensionerId = 0;
-        string connectionString = @"Server=Tanha\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
+        string connectionString = @"Server=NILOY\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
         public Pensioner_Management()
         {
             InitializeComponent();
             LoadPensioners();
             RefreshForm();
         }
+
         private void LoadPensioners()
         {
             try
@@ -45,6 +46,7 @@ namespace Pension_Management_System
                 MessageBox.Show("Failed to load pensioners.\n" + ex.Message);
             }
         }
+
         private void RefreshForm()
         {
             selectedPensionerId = 0;
@@ -60,6 +62,7 @@ namespace Pension_Management_System
             txtSearch.Clear();
             LoadPensioners();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -221,5 +224,6 @@ namespace Pension_Management_System
                 MessageBox.Show("Search failed.\n" + ex.Message);
             }
         }
+
     }
 }

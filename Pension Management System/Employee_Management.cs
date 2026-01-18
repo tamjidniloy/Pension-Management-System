@@ -14,7 +14,7 @@ namespace Pension_Management_System
     public partial class Employee_Management : Form
     {
         int selectedUserId = 0;
-        string connectionString = @"Server = NILOY\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
+        string connectionString = @"Server = DESKTOP-OI5KIFE\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
         public Employee_Management()
         {
             InitializeComponent();

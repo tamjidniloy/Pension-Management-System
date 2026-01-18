@@ -31,7 +31,7 @@ namespace Pension_Management_System
                     return;
                 }
 
-                string connectionString =@"Server=NILOY\SQLEXPRESS; Initial Catalog=Pension Management System;Integrated Security=True;";
+                string connectionString = @"Server=DESKTOP-OI5KIFE\SQLEXPRESS; Initial Catalog=Pension Management System;Integrated Security=True;";
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     string query = @" SELECT R.Role_Name FROM Users U JOIN Roles R ON U.Role_Id = R.Role_Id WHERE U.User_Email = @Email AND U.Password = @Password AND U.IsActive = 1";

@@ -157,6 +157,7 @@
             this.dgvEmployees.Size = new System.Drawing.Size(952, 505);
             this.dgvEmployees.TabIndex = 4;
             this.dgvEmployees.VirtualMode = true;
+         //   this.dgvEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellContentClick);
             this.dgvEmployees.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEmployees_CellMouseDoubleClick);
             // 
             // dgvUser_Id

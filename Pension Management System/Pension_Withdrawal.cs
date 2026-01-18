@@ -121,8 +121,6 @@ namespace Pension_Management_System
             }
         }
 
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -387,5 +385,6 @@ namespace Pension_Management_System
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

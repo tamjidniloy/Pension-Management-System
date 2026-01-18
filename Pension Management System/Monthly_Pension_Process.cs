@@ -172,7 +172,6 @@ namespace Pension_Management_System
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    // 1️⃣ Get all active pensioner accounts
                     string getAccountsQuery = @"SELECT 
                                                 pa.PensionerAccountId,
                                                 pa.Pensioner_Id,
@@ -217,8 +216,7 @@ namespace Pension_Management_System
                         updateCmd.ExecuteNonQuery();
 
                         // 5️⃣ Insert Ledger Entry (Credit)
-                        string insertLedgerQuery = @"INSERT INTO PensionLedger
-                                                   (Pensioner_Id, PensionerAccountId, Credit_Amount, Balance) VALUES (@Pid, @AccId, @Credit, @Balance)";
+                        string insertLedgerQuery = @"INSERT INTO PensionLedger (Pensioner_Id, PensionerAccountId, Credit_Amount, Balance) VALUES (@Pid, @AccId, @Credit, @Balance)";
                         SqlCommand ledgerCmd = new SqlCommand(insertLedgerQuery, con);
                         ledgerCmd.Parameters.AddWithValue("@Pid", pensionerId);
                         ledgerCmd.Parameters.AddWithValue("@AccId", accountId);
@@ -236,5 +234,6 @@ namespace Pension_Management_System
                 MessageBox.Show("Monthly pension process failed.\n" + ex.Message);
             }
         }
+
     }
 }

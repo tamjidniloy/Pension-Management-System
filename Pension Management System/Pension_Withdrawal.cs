@@ -23,6 +23,7 @@ namespace Pension_Management_System
         {
             InitializeComponent();
             HideAllPanels();
+            LoadBanks();
             this.previousForm = pform;
         }
 
@@ -41,6 +42,7 @@ namespace Pension_Management_System
                 {
                     string query = @"
             SELECT 
+                p.Pensioner_Id,
                 pa.PensionerAccountId,
                 p.Full_Name,
                 p.NID_Num,
@@ -51,15 +53,20 @@ namespace Pension_Management_System
             INNER JOIN PaymentMethods pm ON pm.Payment_Method_Id = pa.Payment_Method_Id
             WHERE pa.IsActive = 1
               AND p.IsActive = 1
-              AND (CAST(pa.PensionerAccountId AS VARCHAR) LIKE @keyOR p.Full_Name LIKE @key OR p.NID_Num LIKE @key)";
+              AND (
+                    CAST(pa.PensionerAccountId AS VARCHAR) LIKE @key
+                 OR p.Full_Name LIKE @key
+                 OR p.NID_Num LIKE @key
+              )";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     da.SelectCommand.Parameters.AddWithValue("@key", "%" + keyword + "%");
 
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    dgvAccounts.DataSource = dt;
+
                     dgvAccounts.AutoGenerateColumns = false;
+                    dgvAccounts.DataSource = dt;
                     dgvAccounts.ClearSelection();
                 }
             }

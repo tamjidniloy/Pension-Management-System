@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvAccounts = new System.Windows.Forms.DataGridView();
             this.pnlEmployee = new System.Windows.Forms.Panel();
@@ -97,14 +97,14 @@
             this.dgvAccounts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAccounts.BackgroundColor = System.Drawing.Color.White;
             this.dgvAccounts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.NullValue = null;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvAccounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dgvAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PensionerAccountId,
@@ -113,14 +113,14 @@
             this.Current_Balance,
             this.Payment_Method_Name});
             this.dgvAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAccounts.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAccounts.DefaultCellStyle = dataGridViewCellStyle32;
             this.dgvAccounts.EnableHeadersVisualStyles = false;
             this.dgvAccounts.GridColor = System.Drawing.Color.White;
             this.dgvAccounts.Location = new System.Drawing.Point(36, 242);
@@ -128,14 +128,14 @@
             this.dgvAccounts.MultiSelect = false;
             this.dgvAccounts.Name = "dgvAccounts";
             this.dgvAccounts.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvAccounts.RowHeadersVisible = false;
             this.dgvAccounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvAccounts.RowTemplate.DividerHeight = 1;
@@ -207,7 +207,7 @@
             this.pnlCash.BackColor = System.Drawing.Color.LightYellow;
             this.pnlCash.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCash.Controls.Add(this.btnWithdrawCash);
-            this.pnlCash.Location = new System.Drawing.Point(1036, 636);
+            this.pnlCash.Location = new System.Drawing.Point(1036, 620);
             this.pnlCash.Name = "pnlCash";
             this.pnlCash.Size = new System.Drawing.Size(690, 100);
             this.pnlCash.TabIndex = 7;
@@ -336,7 +336,7 @@
             this.pnlBank.Controls.Add(this.btnTransferBank);
             this.pnlBank.Controls.Add(this.label11);
             this.pnlBank.Controls.Add(this.label10);
-            this.pnlBank.Location = new System.Drawing.Point(1036, 620);
+            this.pnlBank.Location = new System.Drawing.Point(1032, 644);
             this.pnlBank.Name = "pnlBank";
             this.pnlBank.Size = new System.Drawing.Size(690, 192);
             this.pnlBank.TabIndex = 8;
@@ -354,7 +354,6 @@
             this.btnWithdrawCash.TabIndex = 12;
             this.btnWithdrawCash.Text = "Withdraw";
             this.btnWithdrawCash.UseVisualStyleBackColor = false;
-            this.btnWithdrawCash.Visible = false;
             this.btnWithdrawCash.Click += new System.EventHandler(this.btnWithdrawCash_Click);
             // 
             // txtWithdrawAmount
@@ -407,7 +406,6 @@
             this.btnTransferBank.TabIndex = 13;
             this.btnTransferBank.Text = "Withdraw";
             this.btnTransferBank.UseVisualStyleBackColor = false;
-            this.btnTransferBank.Visible = false;
             this.btnTransferBank.Click += new System.EventHandler(this.btnTransferBank_Click);
             // 
             // txtBankAccount
@@ -434,7 +432,7 @@
             this.pnlMFS.Controls.Add(this.txtMFSPhone);
             this.pnlMFS.Controls.Add(this.btnTransferMFS);
             this.pnlMFS.Controls.Add(this.label12);
-            this.pnlMFS.Location = new System.Drawing.Point(1032, 624);
+            this.pnlMFS.Location = new System.Drawing.Point(1032, 631);
             this.pnlMFS.Name = "pnlMFS";
             this.pnlMFS.Size = new System.Drawing.Size(690, 192);
             this.pnlMFS.TabIndex = 9;
@@ -459,7 +457,6 @@
             this.btnTransferMFS.TabIndex = 13;
             this.btnTransferMFS.Text = "Withdraw";
             this.btnTransferMFS.UseVisualStyleBackColor = false;
-            this.btnTransferMFS.Visible = false;
             this.btnTransferMFS.Click += new System.EventHandler(this.btnTransferMFS_Click);
             // 
             // label12
@@ -549,11 +546,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1762, 884);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.pnlBank);
             this.Controls.Add(this.pnlMFS);
+            this.Controls.Add(this.pnlBank);
+            this.Controls.Add(this.pnlCash);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pnlCash);
             this.Controls.Add(this.pnlEmployee);
             this.Controls.Add(this.dgvAccounts);
             this.Controls.Add(this.txtSearch);

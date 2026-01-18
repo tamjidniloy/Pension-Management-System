@@ -51,5 +51,12 @@ namespace Pension_Management_System
             this.Hide();
             frm.Show();
         }
+
+        private void btnManageWithdraw_Click(object sender, EventArgs e)
+        {
+            Pension_Withdrawal frm = new Pension_Withdrawal(this);
+            this.Hide();
+            frm.Show();
+        }
     }
 }

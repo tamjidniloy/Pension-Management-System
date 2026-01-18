@@ -27,49 +27,35 @@ namespace Pension_Management_System
 
                 if (email == "" || password == "")
                 {
-                    MessageBox.Show("Please enter email and password",
-                                    "Validation",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
+                    MessageBox.Show("Please enter email and password", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+<<<<<<< HEAD
 
                 string connectionString =
                     @"Server=Tanha\SQLEXPRESS;
               Initial Catalog=Pension Management System;
               Integrated Security=True;";
 
+=======
+                string connectionString =@"Server=NILOY\SQLEXPRESS; Initial Catalog=Pension Management System;Integrated Security=True;";
+>>>>>>> fbf5adb5ac6cedeccf131eccd59ca9b7f8d2a346
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = @"
-                SELECT R.Role_Name
-                FROM Users U
-                JOIN Roles R ON U.Role_Id = R.Role_Id
-                WHERE U.User_Email = @Email
-                      AND U.Password = @Password
-                      AND U.IsActive = 1";
-
+                    string query = @" SELECT R.Role_Name FROM Users U JOIN Roles R ON U.Role_Id = R.Role_Id WHERE U.User_Email = @Email AND U.Password = @Password AND U.IsActive = 1";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@Email", email);
                         cmd.Parameters.AddWithValue("@Password", password);
-
                         con.Open();
                         object role = cmd.ExecuteScalar();
-
                         if (role == null)
                         {
-                            MessageBox.Show("Invalid email or password",
-                                            "Login Failed",
-                                            MessageBoxButtons.OK,
-                                            MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid email or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-
                         this.Hide();
-
                         string userRole = role.ToString();
-
                         if (userRole == "Admin")
                         {
                             new FrmAdminDashboard().Show();
@@ -80,10 +66,7 @@ namespace Pension_Management_System
                         }
                         else
                         {
-                            MessageBox.Show("Unknown role detected",
-                                            "Error",
-                                            MessageBoxButtons.OK,
-                                            MessageBoxIcon.Error);
+                            MessageBox.Show("Unknown role detected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             this.Show();
                         }
                     }
@@ -91,10 +74,7 @@ namespace Pension_Management_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,
-                                "System Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

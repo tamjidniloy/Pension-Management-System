@@ -15,7 +15,7 @@ namespace Pension_Management_System
     {
         int selectedAccountId = 0;
         int selectedPensionerId = 0;
-        string connectionString = @"Server = Tanha\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
+        string connectionString = @"Server = NILOY\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
         public Pensioner_Accounts()
         {
             InitializeComponent();

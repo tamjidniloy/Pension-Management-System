@@ -14,7 +14,7 @@ namespace Pension_Management_System
     public partial class Monthly_Pension_Process : Form
     {
         private Form previousForm;
-        string connectionString = @"Server = Tanha\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
+        string connectionString = @"Server = NILOY\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
         public Monthly_Pension_Process(Form previousForm)
         {
             InitializeComponent();

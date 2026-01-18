@@ -53,7 +53,7 @@ namespace Pension_Management_System
                                         INNER JOIN Pensioners p ON p.Pensioner_Id = pa.Pensioner_Id
                                         INNER JOIN PaymentMethods pm ON pm.Payment_Method_Id = pa.Payment_Method_Id
                                         WHERE pa.IsActive = 1
-                                          AND p.IsActive = 1";
+                                          AND p.IsActive = 1 ORDER by pa.PensionerAccountId DESC ";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataTable dt = new DataTable();

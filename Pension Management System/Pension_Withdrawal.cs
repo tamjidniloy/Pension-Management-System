@@ -19,7 +19,7 @@ namespace Pension_Management_System
         decimal selectedBalance = 0;
         string selectedPaymentMethod = "";
         private Form previousForm;
-        string connectionString = @"Server=DESKTOP-OI5KIFE\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
+        string connectionString = @"Server=Tanha\SQLEXPRESS;Initial Catalog=Pension Management System;Integrated Security=True;";
         public Pension_Withdrawal(Form pform)
         {
             InitializeComponent();
@@ -120,8 +120,6 @@ namespace Pension_Management_System
                 MessageBox.Show("Failed to load banks.\n" + ex.Message);
             }
         }
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -387,5 +385,6 @@ namespace Pension_Management_System
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

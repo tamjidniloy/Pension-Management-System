@@ -147,5 +147,11 @@
   <ItemGroup>
     <None Include="Resources\Screenshot_20250414_235826_Gallery.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OIP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\201435-lifetime-allowance-removal-pension-boost.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

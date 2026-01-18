@@ -67,7 +67,6 @@ namespace Pension_Management_System
                     FROM Users U
                     JOIN Roles R ON U.Role_Id = R.Role_Id
                     WHERE U.IsActive = 1 ORDER by U.User_Id DESC";
-
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -207,10 +206,8 @@ namespace Pension_Management_System
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     string query ="UPDATE Users SET IsActive = 0 WHERE User_Id=@Id";
-
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Id", selectedUserId);
-
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
@@ -240,7 +237,6 @@ namespace Pension_Management_System
                 WHERE U.IsActive = 1
                   AND (U.User_Email LIKE @key
                        OR U.User_PhoneNum LIKE @key)";
-
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
                     da.SelectCommand.Parameters.AddWithValue( "@key", "%" + txtSearch.Text.Trim() + "%");
                     DataTable dt = new DataTable();

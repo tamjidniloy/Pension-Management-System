@@ -63,6 +63,26 @@ namespace Pension_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _201435_lifetime_allowance_removal_pension_boost {
+            get {
+                object obj = ResourceManager.GetObject("201435-lifetime-allowance-removal-pension-boost", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OIP {
+            get {
+                object obj = ResourceManager.GetObject("OIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_suzyhazelwood_1629236 {
             get {
                 object obj = ResourceManager.GetObject("pexels-suzyhazelwood-1629236", resourceCulture);

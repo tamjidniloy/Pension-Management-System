@@ -24,14 +24,12 @@ namespace Pension_Management_System
             {
                 string email = txtEmail.Text.Trim();
                 string password = txtPassword.Text.Trim();
-
                 if (email == "" || password == "")
                 {
                     MessageBox.Show("Please enter email and password", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-
-                string connectionString = @"Server=DESKTOP-OI5KIFE\SQLEXPRESS; Initial Catalog=Pension Management System;Integrated Security=True;";
+                string connectionString =@"Server=Tanha\SQLEXPRESS; Initial Catalog=Pension Management System;Integrated Security=True;";
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     string query = @" SELECT R.Role_Name FROM Users U JOIN Roles R ON U.Role_Id = R.Role_Id WHERE U.User_Email = @Email AND U.Password = @Password AND U.IsActive = 1";
